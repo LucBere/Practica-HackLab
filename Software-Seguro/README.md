@@ -152,7 +152,7 @@ Desafíos orientados al aprendizaje de la plataforma y el uso de herramientas ba
 | 26 | Asistencia | Information Disclosure | HackLab 2024 | ⏳ Pendiente | `information-disclosure/asistencia/` |
 | 27 | Mis viajes | SQLi | HackLab 2024 | ✅ Resuelto | [`sqli/writeup_Mis-Viajes.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/sqli/writeup_Mis-Viajes.md) |
 | 29 | Blog Hacklab | XSS | HackLab 2024 | ⏳ Pendiente | `xss/blog-hacklab/` |
-| 30 | RSA Robusto | Criptoanálisis | HackLab 2024 | ⏳ Pendiente | `criptoanalisis/rsa-robusto/` |
+| 30 | RSA Robusto | Criptoanálisis | HackLab 2024 | ✅ Resuelto | [`criptoanalisis/writeup_RSA-Robusto.md`](criptoanalisis/writeup_RSA-Robusto.md) |
 | 31 | Libros Gratis | Reversing Apk - Broken Access Control | HackLab 2024 | ⏳ Pendiente | `reversing/libros-gratis/` |
 | 32 | El analista | Condiciones de carrera | HackLab 2024 | ⏳ Pendiente | `condiciones-de-carrera/el-analista/` |
 | 33 | ECommerce | Auth | HackLab 2024 | ⏳ Pendiente | `auth/ecommerce/` |
