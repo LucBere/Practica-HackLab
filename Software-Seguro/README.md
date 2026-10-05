@@ -144,7 +144,7 @@ Desafíos orientados al aprendizaje de la plataforma y el uso de herramientas ba
 | 18 | Votación nueva versión | Broken Access Control | HackLab 2023 | ⏳ Pendiente | `broken-access-control/votacion-nueva-version/` |
 | 19 | Presupuesto | Mass Assignment | HackLab 2023 | ⏳ Pendiente | `mass-assignment/presupuesto/` |
 | 20 | Galería de imágenes | SQLi | HackLab 2023 | ✅ Resuelto | [`sqli/writeup_Galeria-de-imagenes.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/sqli/writeup_Galeria-de-imagenes.md) |
-| 21 | Logs | SQLi | HackLab 2023 | ⏳ Pendiente | `sqli/logs/` |
+| 21 | Logs | SQLi | HackLab 2023 | ✅ Resuelto | [`sqli/writeup_Logs.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/sqli/writeup_Logs.md) |
 | 22 | Turnero | IDOR | HackLab 2024 | ⏳ Pendiente | `idor/turnero/` |
 | 23 | Calculadora | IDOR - Reversing Desktop Apps | HackLab 2024 | ⏳ Pendiente | `reversing/calculadora/` |
 | 24 | Préstamo | Mass Assignment | HackLab 2024 | ⏳ Pendiente | `mass-assignment/prestamo/` |
