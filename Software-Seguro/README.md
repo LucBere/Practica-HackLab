@@ -131,7 +131,7 @@ Desafíos orientados al aprendizaje de la plataforma y el uso de herramientas ba
 | 5 | Apagar la IA | IDOR | HackLab 2023 | ✅ Resuelto | [`idor/apagar-la-ia.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/idor/apagar-la-ia.md) |
 | 6 | Búsqueda de usuarios | XSS | - | ✅ Resuelto (LucBere) | [`xss/writeup_Busqueda-de-usuarios.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/xss/writeup_Busqueda-de-usuarios.md) |
 | 7 | El blog de Pepe | XSS | HackLab 2023 | ✅ Resuelto (Lucas) | [`xss/writeup_el-blog-de-pepe_Lucas.md`](xss/writeup_el-blog-de-pepe_Lucas.md) |
-| 8 | El blog de Pepe segurizado | XSS | - | ⏳ Pendiente | `xss/el-blog-de-pepe-segurizado/` |
+| 8 | El blog de Pepe segurizado | XSS | - | ✅ Resuelto (Lucas) | [`xss/writeup_el-blog-de-pepe-segurizado_Lucas.md`](xss/writeup_el-blog-de-pepe-segurizado_Lucas.md) |
 | 9 | Algoritmo personalizado | Criptoanálisis | HackLab 2023 | ✅ Resuelto | [`criptoanalisis/writeup_Algoritmo-personalizado.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/criptoanalisis/writeup_Algoritmo-personalizado.md) |
 | 10 | Mensaje cifrado | Criptoanálisis | - | ✅ Resuelto | [`criptoanalisis/writeup-Mensaje_Cifrado.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/criptoanalisis/writeup-Mensaje_Cifrado.md) |
 | 11 | Gran Rifa 2019 | Mass Assignment | - | ⏳ Pendiente | `mass-assignment/gran-rifa-2019/` |
