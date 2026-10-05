@@ -33,7 +33,7 @@ Practica-HackLab/
 Plataforma de entrenamiento en ciberseguridad ofensiva y defensiva ([SoftwareSeguro](https://softwareseguro.com.ar/)).  
 Contiene retos organizados por tipo de vulnerabilidad:
 
-- **SQLi**: [`Software-Seguro/sqli/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/sqli/) (incluye reto resuelto `nsa/`).
+- **SQLi**: [`Software-Seguro/sqli/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/sqli/) (incluye reto resuelto `writeup_NSA.md`).
 - **IDOR**: [`Software-Seguro/idor/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/idor/) (incluye retos `aldeas-inseguras.md`, `apagar-la-ia.md`).
 - **Desbordamiento de memoria**: [`Software-Seguro/desbordamiento-de-memoria/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/desbordamiento-de-memoria/) (incluye reto resuelto `rompiendo-autenticacion/` con exploit).
 - **Criptoanálisis**: [`Software-Seguro/criptoanalisis/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/criptoanalisis/) (incluye `writeup_Algoritmo-personalizado.md`, `writeup-Mensaje_Cifrado.md`, `writeup_Recuperación-de-imagen.md`).

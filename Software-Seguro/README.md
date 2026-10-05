@@ -123,7 +123,7 @@ Desafíos orientados al aprendizaje de la plataforma y el uso de herramientas ba
 | # | Desafío | Categoría | Evento / Edición | Estado | Writeup / Ruta |
 |---|---|---|---|:---:|---|
 | 1 | Uso del inspector | Introducción | - | ✅ Resuelto | `introduccion/uso-del-inspector/` |
-| 2 | NSA | SQLi | - | ✅ Resuelto | [`sqli/nsa/writeup.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/sqli/nsa/writeup.md) |
+| 2 | NSA | SQLi | - | ✅ Resuelto | [`sqli/writeup_NSA.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/sqli/writeup_NSA.md) |
 | 3 | Home Banking | SQLi | - | ✅ Resuelto | `sqli/home-banking/` |
 | 4 | Aldeas inseguras | IDOR | - | ✅ Resuelto | [`idor/aldeas-inseguras.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/idor/aldeas-inseguras.md) |
 | 5 | Apagar la IA | IDOR | HackLab 2023 | ✅ Resuelto | [`idor/apagar-la-ia.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/idor/apagar-la-ia.md) |
