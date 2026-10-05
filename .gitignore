@@ -11,3 +11,6 @@ $RECYCLE.BIN/
 # Temporary
 *.tmp
 *.log
+
+# Antigravity / Agents
+.agents/
