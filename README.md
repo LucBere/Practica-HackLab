@@ -38,6 +38,7 @@ Contiene retos organizados por tipo de vulnerabilidad:
 - **Desbordamiento de memoria**: [`Software-Seguro/desbordamiento-de-memoria/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/desbordamiento-de-memoria/) (incluye reto resuelto `rompiendo-autenticacion/` con exploit).
 - **Criptoanálisis**: [`Software-Seguro/criptoanalisis/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/criptoanalisis/) (incluye `writeup_Algoritmo-personalizado.md`, `writeup-Mensaje_Cifrado.md`, `writeup_Recuperación-de-imagen.md`).
 - **XSS**: [`Software-Seguro/xss/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/xss/) (incluye `writeup_Busqueda-de-usuarios.md`).
+- **Fuerza bruta**: [`Software-Seguro/fuerza-bruta/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/fuerza-bruta/) (incluye `writeup-El_Mejor_Secreto.md`).
 
 👉 *Para ver la tabla completa con los 51 desafíos, el estado de resolución y el índice temático, consulta el [`README de Software Seguro`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/README.md).*
 
@@ -59,5 +60,5 @@ Consulta el [ROADMAP de CyLab](file:///d:/HackLab_Practica/Practica-HackLab-main
 
 ---
 
-*Usuario:* `adonaissh`  
+*Colaboradores:* `adonaissh`, `LucBere`  
 *Entorno:* Windows / PowerShell / Python / Burp Suite / Browser DevTools

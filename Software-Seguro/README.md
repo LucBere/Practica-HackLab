@@ -47,7 +47,7 @@ Software-Seguro/
 | 3 | Home Banking | SQLi | - | ✅ Resuelto | `sqli/home-banking/` |
 | 4 | Aldeas inseguras | IDOR | - | ✅ Resuelto | [`idor/aldeas-inseguras.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/idor/aldeas-inseguras.md) |
 | 5 | Apagar la IA | IDOR | HackLab 2023 | ✅ Resuelto | [`idor/apagar-la-ia.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/idor/apagar-la-ia.md) |
-| 6 | Búsqueda de usuarios | XSS | - | ⏳ Pendiente | [`xss/writeup_Busqueda-de-usuarios.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/xss/writeup_Busqueda-de-usuarios.md) |
+| 6 | Búsqueda de usuarios | XSS | - | ✅ Resuelto (LucBere) | [`xss/writeup_Busqueda-de-usuarios.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/xss/writeup_Busqueda-de-usuarios.md) |
 | 7 | El blog de Pepe | XSS | HackLab 2023 | ⏳ Pendiente | `xss/el-blog-de-pepe/` |
 | 8 | El blog de Pepe segurizado | XSS | - | ⏳ Pendiente | `xss/el-blog-de-pepe-segurizado/` |
 | 9 | Algoritmo personalizado | Criptoanálisis | HackLab 2023 | ✅ Resuelto | [`criptoanalisis/writeup_Algoritmo-personalizado.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/criptoanalisis/writeup_Algoritmo-personalizado.md) |
@@ -79,7 +79,7 @@ Software-Seguro/
 | 36 | Notas Universitarias | Tokens - IDOR | - | ⏳ Pendiente | `tokens/notas-universitarias/` |
 | 37 | Local Storage and Cookie | Introducción | - | ⏳ Pendiente | `introduccion/local-storage-and-cookie/` |
 | 38 | Cotizaciones Dólar | SSRF | - | ⏳ Pendiente | `ssrf/cotizaciones-dolar/` |
-| 39 | El mejor secreto | Fuerza bruta | HackLab 2025 | ⏳ Pendiente | `fuerza-bruta/el-mejor-secreto/` |
+| 39 | El mejor secreto | Fuerza bruta | HackLab 2025 | ✅ Resuelto | [`fuerza-bruta/writeup-El_Mejor_Secreto.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/fuerza-bruta/writeup-El_Mejor_Secreto.md) |
 | 40 | Imagen importante | CSRF | HackLab 2025 | ⏳ Pendiente | `csrf/imagen-importante/` |
 | 41 | Reservas de hotel | IDOR | HackLab 2025 | ⏳ Pendiente | `idor/reservas-de-hotel/` |
 | 42 | Direct chat | WebRTC | HackLab 2025 | ⏳ Pendiente | `webrtc/direct-chat/` |
@@ -97,4 +97,4 @@ Software-Seguro/
 ---
 
 *Plataforma:* [SoftwareSeguro](https://softwareseguro.com.ar/)  
-*Autor:* adonaissh
+*Colaboradores / Autores:* `adonaissh`, `LucBere`

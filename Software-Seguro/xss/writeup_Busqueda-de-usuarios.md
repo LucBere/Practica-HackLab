@@ -4,6 +4,7 @@
 - **ID Desafío:** 6
 - **Categoría:** XSS / HTML Injection
 - **Dificultad:** Introductorio
+- **Autor / Colaborador:** LucBere
 
 ---
 
