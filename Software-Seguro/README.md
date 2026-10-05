@@ -14,27 +14,107 @@ Software-Seguro/
 │   └── <nombre-del-ejercicio>/ (o archivo writeup-<ejercicio>.md)
 ```
 
-### Categorías de Desafíos
+### Guía y Conceptos por Categoría
 
-- **`sqli/`**: Inyecciones SQL (ej. *NSA*, *Home Banking*, *Galería de imágenes*, *Mis viajes*).
-- **`idor/`**: Insecure Direct Object References (ej. *Aldeas inseguras*, *Apagar la IA*, *Turnero*).
-- **`desbordamiento-de-memoria/`**: Memory Corruption, Stack Overflow & Binary Exploitation (ej. *Manipulando el Stack*, *Rompiendo Autenticación*).
-- **`criptoanalisis/`**: Criptografía y Criptoanálisis (ej. *Algoritmo personalizado*, *Mensaje cifrado*, *Recuperación de imagen*, *Chat Seguro*, *RSA Robusto*, *SatSim*).
-- **`xss/`**: Cross-Site Scripting reflejado, almacenado y basado en DOM (ej. *Búsqueda de usuarios*, *El blog de Pepe*, *Blog Hacklab*).
-- **`broken-access-control/`**: Fallas de control de accesos e impersonación (ej. *Votación*, *Compra de divisas*).
-- **`mass-assignment/`**: Asignación masiva de parámetros (ej. *Gran Rifa 2019*, *Presupuesto*, *Préstamo*).
-- **`tokens/`**: Vulnerabilidades y manipulación de tokens de sesión / autenticación (ej. *Consulta de multas*).
-- **`information-disclosure/`**: Fuga o exposición de datos confidenciales (ej. *Asistencia*).
-- **`reversing/`**: Ingeniería inversa en aplicaciones de escritorio y ejecutables APK (ej. *Calculadora*, *Libros Gratis*, *Tetris*, *Secure Chat*, *Soporte Confidencial*).
-- **`condiciones-de-carrera/`**: Race conditions y concurrencia (ej. *El analista*).
-- **`auth/`**: Mecanismos de autenticación inseguros (ej. *ECommerce*, *Snow Storm*).
-- **`ssrf/`**: Server-Side Request Forgery (ej. *Cotizaciones Dólar*).
-- **`fuerza-bruta/`**: Ataques de fuerza bruta y diccionario (ej. *El mejor secreto*).
-- **`csrf/`**: Cross-Site Request Forgery (ej. *Imagen importante*).
-- **`webrtc/`**: Protocolos e implementaciones WebRTC (ej. *Direct chat*).
-- **`logica-de-negocio/`**: Fallas en la lógica de negocio (ej. *Venta de autos*).
-- **`sanitizacion/`**: Bypass y corrección de filtros de entrada (ej. *Fix Urgente*).
-- **`introduccion/`**: Conceptos introductorios e inspección (ej. *Uso del inspector*, *Local Storage and Cookie*).
+A continuación se detalla qué significa cada categoría de vulnerabilidad y qué conocimientos y herramientas se requieren para resolverla:
+
+#### 1. SQLi (SQL Injection)
+Inyectar código SQL en campos de entrada para manipular consultas a la base de datos (leer datos no autorizados, bypassear logins, volcar tablas, etc.).  
+- **Necesitás:** Sintaxis SQL, operadores como `OR 1=1`, `UNION SELECT`, comentarios (`--`, `#`).  
+- **Herramientas:** Burp Suite para interceptar requests, a veces `sqlmap`.
+
+#### 2. IDOR (Insecure Direct Object Reference)
+La app te deja acceder a recursos de otros usuarios solo cambiando un ID en la URL o request (ej: `/usuario/123` → cambiás a `/usuario/124` y ves datos ajenos sin autorización).  
+- **Necesitás:** Ojo atento a identificadores secuenciales/predecibles en parámetros GET o body JSON.  
+- **Herramientas:** Burp Suite o las devtools del navegador (`F12`) para interceptar y modificar requests.
+
+#### 3. XSS (Cross-Site Scripting)
+Inyectar JavaScript malicioso que se ejecuta en el navegador de otro usuario (vía campos de texto, comentarios, parámetros URL que no sanitizan bien).  
+- **Necesitás:** Conocimientos de HTML/JS, payloads tipo `<script>alert(1)</script>`, entender el contexto de inyección (dentro de atributo, dentro de script, DOM).  
+- **Herramientas:** Browser DevTools, Burp Suite.
+
+#### 4. Criptoanálisis
+Romper o explotar debilidades en algoritmos de cifrado mal implementados (claves débiles, algoritmos caseros, reutilización de IV, etc.).  
+- **Necesitás:** Conocimientos básicos de criptografía (XOR, RSA, cifrados de sustitución), scripts en Python.  
+- **Herramientas:** Python (`pycryptodome`, `hashlib`), CyberChef.
+
+#### 5. Mass Assignment
+La app permite modificar campos que no deberías poder tocar (ej: mandás `"isAdmin": true` en un JSON de registro y la API lo acepta sin validar).  
+- **Necesitás:** Identificar modelos y atributos en backend, probar agregar propiedades adicionales al payload.  
+- **Herramientas:** Burp Suite para interceptar y agregar/modificar campos en el body (normalmente JSON).
+
+#### 6. Broken Access Control
+Categoría amplia de fallas de autorización donde se puede hacer algo que no debería estar permitido para tu rol/usuario (puede solaparse con IDOR o escalamiento vertical).  
+- **Necesitás:** Entender roles y permisos de la aplicación, probar acciones restringidas directamente vía requests.  
+- **Herramientas:** Burp Suite, repetición de peticiones con diferentes tokens de usuario.
+
+#### 7. Desbordamiento de memoria (Buffer Overflow)
+Explotar falta de validación de límites en buffers de memoria (`strcpy`, arrays fijos) para corromper variables adyacentes, registros o el flujo de ejecución.  
+- **Necesitás:** Conocimientos de C y assembly x86/x64, estructura del stack y punteros de retorno.  
+- **Herramientas:** `gdb`, `checksec`, Python para armar payloads binarios / exploits.
+
+#### 8. Tokens
+Explotar debilidades en tokens de sesión o autenticación: tokens predecibles, mal firmados, JWT sin verificar firma (`alg: none`), etc.  
+- **Necesitás:** Entender estructura de tokens y JWT.  
+- **Herramientas:** [jwt.io](https://jwt.io/), Burp Suite, scripts de fuerza bruta sobre secretos cortos.
+
+#### 9. Information Disclosure
+La app expone información sensible que no debería (en respuestas de API, comentarios HTML, mensajes de error verbosos, metadatos de archivos).  
+- **Necesitás:** Inspección rigurosa de respuestas HTTP, código fuente, headers y códigos de estado.  
+- **Herramientas:** Browser DevTools (`Ctrl + U` / `F12`), `curl`, Burp Suite.
+
+#### 10. SSRF (Server-Side Request Forgery)
+Lograr que el servidor realice peticiones HTTP hacia destinos internos arbitrarios (ej. `localhost` o la red interna) abusando de funcionalidades que consumen URLs externas.  
+- **Necesitás:** Entender redes internas, esquemas de URL (`http`, `file`, `gopher`), bypass de filtros (`127.0.0.1`, `0177.0.0.1`, DNS rebinding).  
+- **Herramientas:** Burp Collaborator / Webhook.site, Burp Suite.
+
+#### 11. Fuerza bruta
+Probar combinaciones masivas (passwords, tokens, PINs) hasta encontrar la correcta, usualmente ante ausencia de rate limiting o bloqueos.  
+- **Necesitás:** Diccionarios de palabras (`rockyou.txt`, numéricos), optimización de concurrencia.  
+- **Herramientas:** Burp Intruder / Turbo Intruder, scripts personalizados en Python (`requests`, `threading`).
+
+#### 12. CSRF (Cross-Site Request Forgery)
+Forzar a que un usuario autenticado ejecute una acción sin consentimiento (vía un link o formulario malicioso) porque la app no valida tokens anti-CSRF ni orígenes.  
+- **Necesitás:** Entender cookies de sesión, atributo `SameSite`, creación de formularios HTML auto-enviados (`PoC CSRF`).  
+- **Herramientas:** Burp Suite (CSRF PoC generator), servidor local para hospedar el payload.
+
+#### 13. WebRTC
+Explotar la tecnología de comunicación en tiempo real del navegador (fuga de IPs locales/públicas reales detrás de proxys/VPNs, streams no autorizados).  
+- **Necesitás:** Funcionamiento de WebRTC, STUN/TURN, SDP (Session Description Protocol).  
+- **Herramientas:** DevTools del navegador, scripts JS de inspección WebRTC.
+
+#### 14. Reversing Desktop Apps / Reversing APK
+Analizar un binario (.exe) o paquete Android (.apk) sin código fuente para entender su flujo interno, extraer secretos o parchar validaciones.  
+- **Necesitás:** Lectura de pseudocódigo y desensamblado, lógica de programación.  
+- **Herramientas:** Ghidra / IDA Pro / x64dbg (Desktop), `jadx-gui` / `apktool` (Android APK).
+
+#### 15. Condiciones de carrera (Race Conditions)
+Aprovechar operaciones concurrentes simultáneas que rompen la lógica esperada antes de que el estado se bloquee (ej: doble gasto de saldo, canje múltiple de cupones).  
+- **Necesitás:** Identificar ventanas de tiempo críticas entre chequeo y uso (TOCTOU).  
+- **Herramientas:** Burp Turbo Intruder (con request pipelining / single-packet attack), Python con `asyncio` o `threading`.
+
+#### 16. Auth (Autenticación)
+Fallas en el diseño o implementación del proceso de inicio de sesión / verificación de identidad (bypasses lógicos, comparaciones débiles, timing attacks, etc.).  
+- **Necesitás:** Análisis de flujos de login, recuperación de claves, validaciones booleanas.  
+- **Herramientas:** Burp Suite, análisis de código / binarios.
+
+#### 17. Lógica de negocio
+Explotar vacíos en las reglas funcionales del negocio (comprar a precio negativo, alterar cantidades de productos, saltarse pasos secuenciales de pago).  
+- **Necesitás:** Pensamiento lateral para desafiar las asunciones del desarrollador sobre el flujo del usuario.  
+- **Herramientas:** Burp Suite Repeater / Proxy.
+
+#### 18. Sanitización
+Fallas donde la aplicación no limpia o valida correctamente los inputs provistos por el usuario, siendo la causa raíz de inyecciones (XSS, SQLi, Path Traversal).  
+- **Necesitás:** Entender qué caracteres especiales procesa el contexto de destino y cómo bypassear filtros débiles (doble encoding, casos mixtos, null bytes).  
+- **Herramientas:** Burp Suite, codificadores (`CyberChef`).
+
+#### 19. Introducción
+Desafíos orientados al aprendizaje de la plataforma y el uso de herramientas base de inspección web (inspección de elementos, lectura de `LocalStorage`, `Cookies`, consola JavaScript).  
+- **Necesitás:** Manejo elemental del navegador.  
+- **Herramientas:** DevTools (`F12`), pestañas Elements, Console, Application/Storage.
+
+> [!TIP]
+> **Herramienta transversal más importante:** **Burp Suite** (la versión Community gratuita es suficiente para la gran mayoría de retos web) — permite interceptar, modificar, automatizar y repetir requests HTTP/HTTPS con facilidad.
 
 ---
 
