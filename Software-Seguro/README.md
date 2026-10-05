@@ -150,7 +150,7 @@ Desafíos orientados al aprendizaje de la plataforma y el uso de herramientas ba
 | 24 | Préstamo | Mass Assignment | HackLab 2024 | ⏳ Pendiente | `mass-assignment/prestamo/` |
 | 25 | Chat Seguro | Criptoanálisis | HackLab 2024 | ⏳ Pendiente | `criptoanalisis/chat-seguro/` |
 | 26 | Asistencia | Information Disclosure | HackLab 2024 | ⏳ Pendiente | `information-disclosure/asistencia/` |
-| 27 | Mis viajes | SQLi | HackLab 2024 | ⏳ Pendiente | `sqli/mis-viajes/` |
+| 27 | Mis viajes | SQLi | HackLab 2024 | ✅ Resuelto | [`sqli/writeup_Mis-Viajes.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/sqli/writeup_Mis-Viajes.md) |
 | 29 | Blog Hacklab | XSS | HackLab 2024 | ⏳ Pendiente | `xss/blog-hacklab/` |
 | 30 | RSA Robusto | Criptoanálisis | HackLab 2024 | ⏳ Pendiente | `criptoanalisis/rsa-robusto/` |
 | 31 | Libros Gratis | Reversing Apk - Broken Access Control | HackLab 2024 | ⏳ Pendiente | `reversing/libros-gratis/` |
