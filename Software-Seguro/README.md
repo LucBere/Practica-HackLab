@@ -2,6 +2,8 @@
 
 Repositorio de documentación, notas técnicas, análisis de vulnerabilidades, scripts de explotación y bitácoras (*write-ups*) para la plataforma **Software Seguro** (entrenamiento en ciberseguridad ofensiva y defensiva de Pabex).
 
+> 🛠️ Para configurar el entorno con WSL2, GDB, Pwntools, Exiftool y Burp Suite, consulta la [Guía de Setup del Entorno](../SETUP_ENVIRONMENT.md).
+
 ---
 
 ## 📂 Organización por Categorías
@@ -141,7 +143,7 @@ Desafíos orientados al aprendizaje de la plataforma y el uso de herramientas ba
 | 17 | Compra de divisas | Broken Access Control | HackLab 2023 | ⏳ Pendiente | `broken-access-control/compra-de-divisas/` |
 | 18 | Votación nueva versión | Broken Access Control | HackLab 2023 | ⏳ Pendiente | `broken-access-control/votacion-nueva-version/` |
 | 19 | Presupuesto | Mass Assignment | HackLab 2023 | ⏳ Pendiente | `mass-assignment/presupuesto/` |
-| 20 | Galería de imágenes | SQLi | HackLab 2023 | ⏳ Pendiente | `sqli/galeria-de-imagenes/` |
+| 20 | Galería de imágenes | SQLi | HackLab 2023 | ✅ Resuelto | [`sqli/writeup_Galeria-de-imagenes.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/sqli/writeup_Galeria-de-imagenes.md) |
 | 21 | Logs | SQLi | HackLab 2023 | ⏳ Pendiente | `sqli/logs/` |
 | 22 | Turnero | IDOR | HackLab 2024 | ⏳ Pendiente | `idor/turnero/` |
 | 23 | Calculadora | IDOR - Reversing Desktop Apps | HackLab 2024 | ⏳ Pendiente | `reversing/calculadora/` |
@@ -168,7 +170,7 @@ Desafíos orientados al aprendizaje de la plataforma y el uso de herramientas ba
 | 45 | Tetris | Reversing Desktop Apps - Lógica de negocio | HackLab 2025 | ⏳ Pendiente | `reversing/tetris/` |
 | 46 | Secure Chat | Reversing Apk - Fuerza bruta | HackLab 2025 | ⏳ Pendiente | `reversing/secure-chat/` |
 | 47 | Venta de autos | Lógica de negocio | HackLab 2025 | ⏳ Pendiente | `logica-de-negocio/venta-de-autos/` |
-| 48 | Rompiendo Autenticación | Desbordamiento de memoria | - | ✅ Resuelto | [`desbordamiento-de-memoria/rompiendo-autenticacion/writeup.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/desbordamiento-de-memoria/rompiendo-autenticacion/writeup.md) |
+| 48 | Rompiendo Autenticación | Desbordamiento de memoria | - | ✅ Resuelto | [`desbordamiento-de-memoria/writeup_Rompiendo-Autenticacion.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/desbordamiento-de-memoria/writeup_Rompiendo-Autenticacion.md) |
 | 49 | Fix Urgente | Sanitización | - | ⏳ Pendiente | `sanitizacion/fix-urgente/` |
 | 50 | SatSim | Criptoanálisis | - | ⏳ Pendiente | `criptoanalisis/satsim/` |
 | 51 | Imagen perdida | Criptoanálisis | - | ⏳ Pendiente | `criptoanalisis/imagen-perdida/` |

@@ -2,6 +2,8 @@
 
 Repositorio centralizado de documentación, análisis de vulnerabilidades, scripts de explotación y bitácoras (*write-ups*) divididos por plataforma y laboratorio de entrenamiento.
 
+> 🛠️ **¿Nuevo en el entorno de trabajo?** Consulta la guía completa de instalación y configuración de herramientas en [`SETUP_ENVIRONMENT.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/SETUP_ENVIRONMENT.md) (WSL2, Ubuntu, GDB, Pwntools, Exiftool, Burp Suite, etc.).
+
 ---
 
 ## 🗂️ Estructura General del Repositorio
@@ -10,6 +12,7 @@ El proyecto se divide en dos laboratorios independientes:
 
 ```text
 Practica-HackLab/
+├── SETUP_ENVIRONMENT.md  # Guía de instalación del entorno Linux/WSL2 y herramientas
 ├── Software-Seguro/       # Retos y desafíos de la plataforma SoftwareSeguro (Pabex)
 │   ├── README.md          # Catálogo completo de retos (51 desafíos) y guía por categorías
 │   ├── sqli/              # SQL Injection (ej. NSA, Home Banking, etc.)
@@ -33,9 +36,9 @@ Practica-HackLab/
 Plataforma de entrenamiento en ciberseguridad ofensiva y defensiva ([SoftwareSeguro](https://softwareseguro.com.ar/)).  
 Contiene retos organizados por tipo de vulnerabilidad:
 
-- **SQLi**: [`Software-Seguro/sqli/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/sqli/) (incluye reto resuelto `writeup_NSA.md`).
+- **SQLi**: [`Software-Seguro/sqli/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/sqli/) (incluye `writeup_NSA.md`, `writeup_Galeria-de-imagenes.md`).
 - **IDOR**: [`Software-Seguro/idor/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/idor/) (incluye retos `aldeas-inseguras.md`, `apagar-la-ia.md`).
-- **Desbordamiento de memoria**: [`Software-Seguro/desbordamiento-de-memoria/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/desbordamiento-de-memoria/) (incluye reto resuelto `rompiendo-autenticacion/` con exploit).
+- **Desbordamiento de memoria**: [`Software-Seguro/desbordamiento-de-memoria/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/desbordamiento-de-memoria/) (incluye `writeup_Rompiendo-Autenticacion.md` y exploit).
 - **Criptoanálisis**: [`Software-Seguro/criptoanalisis/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/criptoanalisis/) (incluye `writeup_Algoritmo-personalizado.md`, `writeup-Mensaje_Cifrado.md`, `writeup_Recuperación-de-imagen.md`).
 - **XSS**: [`Software-Seguro/xss/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/xss/) (incluye `writeup_Busqueda-de-usuarios.md`).
 - **Fuerza bruta**: [`Software-Seguro/fuerza-bruta/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/fuerza-bruta/) (incluye `writeup-El_Mejor_Secreto.md`).
