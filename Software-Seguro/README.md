@@ -154,7 +154,7 @@ Desafíos orientados al aprendizaje de la plataforma y el uso de herramientas ba
 | 29 | Blog Hacklab | XSS | HackLab 2024 | ⏳ Pendiente | `xss/blog-hacklab/` |
 | 30 | RSA Robusto | Criptoanálisis | HackLab 2024 | ✅ Resuelto | [`criptoanalisis/writeup_RSA-Robusto.md`](criptoanalisis/writeup_RSA-Robusto.md) |
 | 31 | Libros Gratis | Reversing Apk - Broken Access Control | HackLab 2024 | ⏳ Pendiente | `reversing/libros-gratis/` |
-| 32 | El analista | Condiciones de carrera | HackLab 2024 | ⏳ Pendiente | `condiciones-de-carrera/el-analista/` |
+| 32 | El analista | Condiciones de carrera | HackLab 2024 | ✅ Resuelto (Lucas) | [`condiciones-de-carrera/writeup_el-analista_Lucas.md`](condiciones-de-carrera/writeup_el-analista_Lucas.md) |
 | 33 | ECommerce | Auth | HackLab 2024 | ⏳ Pendiente | `auth/ecommerce/` |
 | 34 | Snow Storm | Auth | HackLab 2024 | ⏳ Pendiente | `auth/snow-storm/` |
 | 35 | Aldeas Inseguras V2 | IDOR | - | ⏳ Pendiente | `idor/aldeas-inseguras-v2/` |
