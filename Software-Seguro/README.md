@@ -130,8 +130,8 @@ Desafíos orientados al aprendizaje de la plataforma y el uso de herramientas ba
 | 4 | Aldeas inseguras | IDOR | - | ✅ Resuelto | [`idor/aldeas-inseguras.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/idor/aldeas-inseguras.md) |
 | 5 | Apagar la IA | IDOR | HackLab 2023 | ✅ Resuelto | [`idor/apagar-la-ia.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/idor/apagar-la-ia.md) |
 | 6 | Búsqueda de usuarios | XSS | - | ✅ Resuelto (LucBere) | [`xss/writeup_Busqueda-de-usuarios.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/xss/writeup_Busqueda-de-usuarios.md) |
-| 7 | El blog de Pepe | XSS | HackLab 2023 | ⏳ Pendiente | `xss/el-blog-de-pepe/` |
-| 8 | El blog de Pepe segurizado | XSS | - | ⏳ Pendiente | `xss/el-blog-de-pepe-segurizado/` |
+| 7 | El blog de Pepe | XSS | HackLab 2023 | ✅ Resuelto (Lucas) | [`xss/writeup_el-blog-de-pepe_Lucas.md`](xss/writeup_el-blog-de-pepe_Lucas.md) |
+| 8 | El blog de Pepe segurizado | XSS | - | ✅ Resuelto (Lucas) | [`xss/writeup_el-blog-de-pepe-segurizado_Lucas.md`](xss/writeup_el-blog-de-pepe-segurizado_Lucas.md) |
 | 9 | Algoritmo personalizado | Criptoanálisis | HackLab 2023 | ✅ Resuelto | [`criptoanalisis/writeup_Algoritmo-personalizado.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/criptoanalisis/writeup_Algoritmo-personalizado.md) |
 | 10 | Mensaje cifrado | Criptoanálisis | - | ✅ Resuelto | [`criptoanalisis/writeup-Mensaje_Cifrado.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/criptoanalisis/writeup-Mensaje_Cifrado.md) |
 | 11 | Gran Rifa 2019 | Mass Assignment | - | ⏳ Pendiente | `mass-assignment/gran-rifa-2019/` |
@@ -142,7 +142,7 @@ Desafíos orientados al aprendizaje de la plataforma y el uso de herramientas ba
 | 16 | Ventas | Information Disclosure - IDOR | HackLab 2023 | ⏳ Pendiente | `idor/ventas/` |
 | 17 | Compra de divisas | Broken Access Control | HackLab 2023 | ⏳ Pendiente | `broken-access-control/compra-de-divisas/` |
 | 18 | Votación nueva versión | Broken Access Control | HackLab 2023 | ⏳ Pendiente | `broken-access-control/votacion-nueva-version/` |
-| 19 | Presupuesto | Mass Assignment | HackLab 2023 | ⏳ Pendiente | `mass-assignment/presupuesto/` |
+| 19 | Presupuesto | Mass Assignment | HackLab 2023 | ✅ Resuelto | [`mass-assignment/writeup_Presupuesto_Lucas.md`](mass-assignment/writeup_Presupuesto_Lucas.md) |
 | 20 | Galería de imágenes | SQLi | HackLab 2023 | ✅ Resuelto | [`sqli/writeup_Galeria-de-imagenes.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/sqli/writeup_Galeria-de-imagenes.md) |
 | 21 | Logs | SQLi | HackLab 2023 | ✅ Resuelto | [`sqli/writeup_Logs.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/sqli/writeup_Logs.md) |
 | 22 | Turnero | IDOR | HackLab 2024 | ⏳ Pendiente | `idor/turnero/` |
@@ -154,7 +154,7 @@ Desafíos orientados al aprendizaje de la plataforma y el uso de herramientas ba
 | 29 | Blog Hacklab | XSS | HackLab 2024 | ⏳ Pendiente | `xss/blog-hacklab/` |
 | 30 | RSA Robusto | Criptoanálisis | HackLab 2024 | ✅ Resuelto | [`criptoanalisis/writeup_RSA-Robusto.md`](criptoanalisis/writeup_RSA-Robusto.md) |
 | 31 | Libros Gratis | Reversing Apk - Broken Access Control | HackLab 2024 | ⏳ Pendiente | `reversing/libros-gratis/` |
-| 32 | El analista | Condiciones de carrera | HackLab 2024 | ⏳ Pendiente | `condiciones-de-carrera/el-analista/` |
+| 32 | El analista | Condiciones de carrera | HackLab 2024 | ✅ Resuelto (Lucas) | [`condiciones-de-carrera/writeup_el-analista_Lucas.md`](condiciones-de-carrera/writeup_el-analista_Lucas.md) |
 | 33 | ECommerce | Auth | HackLab 2024 | ⏳ Pendiente | `auth/ecommerce/` |
 | 34 | Snow Storm | Auth | HackLab 2024 | ⏳ Pendiente | `auth/snow-storm/` |
 | 35 | Aldeas Inseguras V2 | IDOR | - | ⏳ Pendiente | `idor/aldeas-inseguras-v2/` |
