@@ -164,7 +164,7 @@ Desafíos orientados al aprendizaje de la plataforma y el uso de herramientas ba
 | 39 | El mejor secreto | Fuerza bruta | HackLab 2025 | ✅ Resuelto | [`fuerza-bruta/writeup-El_Mejor_Secreto.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/fuerza-bruta/writeup-El_Mejor_Secreto.md) |
 | 40 | Imagen importante | CSRF | HackLab 2025 | ⏳ Pendiente | `csrf/imagen-importante/` |
 | 41 | Reservas de hotel | IDOR | HackLab 2025 | ⏳ Pendiente | `idor/reservas-de-hotel/` |
-| 42 | Direct chat | WebRTC | HackLab 2025 | ⏳ Pendiente | `webrtc/direct-chat/` |
+| 42 | Direct chat | WebRTC | HackLab 2025 | ✅ Resuelto | [`webrtc/writeup_Direct-Chat.md`](webrtc/writeup_Direct-Chat.md) |
 | 43 | Blog Hacklab v2 | XSS | HackLab 2025 | ⏳ Pendiente | `xss/blog-hacklab-v2/` |
 | 44 | Mis viajes v2 | SQLi | HackLab 2025 | ✅ Resuelto (Lucas) | [`sqli/writeup_Mis-Viajes-V2.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/sqli/writeup_Mis-Viajes-V2.md) |
 | 45 | Tetris | Reversing Desktop Apps - Lógica de negocio | HackLab 2025 | ⏳ Pendiente | `reversing/tetris/` |
