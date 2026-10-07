@@ -141,7 +141,7 @@ Desafíos orientados al aprendizaje de la plataforma y el uso de herramientas ba
 | 15 | Consulta de multas | Tokens | - | ⏳ Pendiente | `tokens/consulta-de-multas/` |
 | 16 | Ventas | Information Disclosure - IDOR | HackLab 2023 | ⏳ Pendiente | `idor/ventas/` |
 | 17 | Compra de divisas | Broken Access Control | HackLab 2023 | ⏳ Pendiente | `broken-access-control/compra-de-divisas/` |
-| 18 | Votación nueva versión | Broken Access Control | HackLab 2023 | ⏳ Pendiente | `broken-access-control/votacion-nueva-version/` |
+| 18 | Votación nueva versión | Broken Access Control | HackLab 2023 | ✅ Resuelto (adonaissh) | [`broken-access-control/writeup_Votacion-nueva-version.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/broken-access-control/writeup_Votacion-nueva-version.md) |
 | 19 | Presupuesto | Mass Assignment | HackLab 2023 | ✅ Resuelto | [`mass-assignment/writeup_Presupuesto_Lucas.md`](mass-assignment/writeup_Presupuesto_Lucas.md) |
 | 20 | Galería de imágenes | SQLi | HackLab 2023 | ✅ Resuelto | [`sqli/writeup_Galeria-de-imagenes.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/sqli/writeup_Galeria-de-imagenes.md) |
 | 21 | Logs | SQLi | HackLab 2023 | ✅ Resuelto | [`sqli/writeup_Logs.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/sqli/writeup_Logs.md) |
@@ -166,7 +166,7 @@ Desafíos orientados al aprendizaje de la plataforma y el uso de herramientas ba
 | 41 | Reservas de hotel | IDOR | HackLab 2025 | ⏳ Pendiente | `idor/reservas-de-hotel/` |
 | 42 | Direct chat | WebRTC | HackLab 2025 | ⏳ Pendiente | `webrtc/direct-chat/` |
 | 43 | Blog Hacklab v2 | XSS | HackLab 2025 | ⏳ Pendiente | `xss/blog-hacklab-v2/` |
-| 44 | Mis viajes v2 | SQLi | HackLab 2025 | ⏳ Pendiente | `sqli/mis-viajes-v2/` |
+| 44 | Mis viajes v2 | SQLi | HackLab 2025 | ✅ Resuelto (Lucas) | [`sqli/writeup_Mis-Viajes-V2.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/sqli/writeup_Mis-Viajes-V2.md) |
 | 45 | Tetris | Reversing Desktop Apps - Lógica de negocio | HackLab 2025 | ⏳ Pendiente | `reversing/tetris/` |
 | 46 | Secure Chat | Reversing Apk - Fuerza bruta | HackLab 2025 | ⏳ Pendiente | `reversing/secure-chat/` |
 | 47 | Venta de autos | Lógica de negocio | HackLab 2025 | ⏳ Pendiente | `logica-de-negocio/venta-de-autos/` |

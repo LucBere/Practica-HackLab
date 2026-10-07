@@ -36,13 +36,14 @@ Practica-HackLab/
 Plataforma de entrenamiento en ciberseguridad ofensiva y defensiva ([SoftwareSeguro](https://softwareseguro.com.ar/)).  
 Contiene retos organizados por tipo de vulnerabilidad:
 
-- **SQLi**: [`Software-Seguro/sqli/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/sqli/) (incluye `writeup_NSA.md`, `writeup_Galeria-de-imagenes.md`, `writeup_Logs.md`, `writeup_Mis-Viajes.md`).
+- **SQLi**: [`Software-Seguro/sqli/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/sqli/) (incluye `writeup_NSA.md`, `writeup_Galeria-de-imagenes.md`, `writeup_Logs.md`, `writeup_Mis-Viajes.md`, `writeup_Mis-Viajes-V2.md`).
 - **IDOR**: [`Software-Seguro/idor/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/idor/) (incluye retos `aldeas-inseguras.md`, `apagar-la-ia.md`).
 - **Desbordamiento de memoria**: [`Software-Seguro/desbordamiento-de-memoria/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/desbordamiento-de-memoria/) (incluye `writeup_Rompiendo-Autenticacion.md` y exploit).
 - **Criptoanálisis**: [`Software-Seguro/criptoanalisis/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/criptoanalisis/) (incluye `writeup_Algoritmo-personalizado.md`, `writeup-Mensaje_Cifrado.md`, `writeup_Recuperación-de-imagen.md`).
 - **XSS**: [`Software-Seguro/xss/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/xss/) (incluye `writeup_Busqueda-de-usuarios.md`).
 - **Fuerza bruta**: [`Software-Seguro/fuerza-bruta/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/fuerza-bruta/) (incluye `writeup-El_Mejor_Secreto.md`).
 - **Reversing / Desktop Apps**: [`Software-Seguro/reversing/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/reversing/) (incluye `writeup_Calculadora.md`).
+- **Broken Access Control**: [`Software-Seguro/broken-access-control/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/broken-access-control/) (incluye `writeup_Votacion-nueva-version.md`).
 
 👉 *Para ver la tabla completa con los 51 desafíos, el estado de resolución y el índice temático, consulta el [`README de Software Seguro`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/README.md).*
 
