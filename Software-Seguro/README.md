@@ -153,7 +153,7 @@ Desafíos orientados al aprendizaje de la plataforma y el uso de herramientas ba
 | 27 | Mis viajes | SQLi | HackLab 2024 | ✅ Resuelto | [`sqli/writeup_Mis-Viajes.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/sqli/writeup_Mis-Viajes.md) |
 | 29 | Blog Hacklab | XSS | HackLab 2024 | ⏳ Pendiente | `xss/blog-hacklab/` |
 | 30 | RSA Robusto | Criptoanálisis | HackLab 2024 | ✅ Resuelto | [`criptoanalisis/writeup_RSA-Robusto.md`](criptoanalisis/writeup_RSA-Robusto.md) |
-| 31 | Libros Gratis | Reversing Apk - Broken Access Control | HackLab 2024 | ⏳ Pendiente | `reversing/libros-gratis/` |
+| 31 | Libros Gratis | Reversing Apk - Broken Access Control | HackLab 2024 | ✅ Resuelto (adonaissh) | [`reversing-apk/writeup_Libros-Gratis.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/reversing-apk/writeup_Libros-Gratis.md) |
 | 32 | El analista | Condiciones de carrera | HackLab 2024 | ✅ Resuelto (Lucas) | [`condiciones-de-carrera/writeup_el-analista_Lucas.md`](condiciones-de-carrera/writeup_el-analista_Lucas.md) |
 | 33 | ECommerce | Auth | HackLab 2024 | ⏳ Pendiente | `auth/ecommerce/` |
 | 34 | Snow Storm | Auth | HackLab 2024 | ⏳ Pendiente | `auth/snow-storm/` |
@@ -174,7 +174,7 @@ Desafíos orientados al aprendizaje de la plataforma y el uso de herramientas ba
 | 49 | Fix Urgente | Sanitización | - | ⏳ Pendiente | `sanitizacion/fix-urgente/` |
 | 50 | SatSim | Criptoanálisis | - | ⏳ Pendiente | `criptoanalisis/satsim/` |
 | 51 | Imagen perdida | Criptoanálisis | - | ⏳ Pendiente | `criptoanalisis/imagen-perdida/` |
-| 52 | Soporte Confidencial | IDOR - Reversing Apk | HackingDay 2026 | ⏳ Pendiente | `reversing/soporte-confidencial/` |
+| 52 | Soporte Confidencial | IDOR - Reversing Apk | HackingDay 2026 | ✅ Resuelto (adonaissh) | [`reversing-apk/writeup_Soporte-confidencial.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/reversing-apk/writeup_Soporte-confidencial.md) |
 
 ---
 

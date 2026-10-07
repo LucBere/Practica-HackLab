@@ -44,6 +44,7 @@ Contiene retos organizados por tipo de vulnerabilidad:
 - **Fuerza bruta**: [`Software-Seguro/fuerza-bruta/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/fuerza-bruta/) (incluye `writeup-El_Mejor_Secreto.md`).
 - **Reversing / Desktop Apps**: [`Software-Seguro/reversing/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/reversing/) (incluye `writeup_Calculadora.md`).
 - **Broken Access Control**: [`Software-Seguro/broken-access-control/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/broken-access-control/) (incluye `writeup_Votacion-nueva-version.md`).
+- **Reversing APK**: [`Software-Seguro/reversing-apk/`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/reversing-apk/) (incluye `writeup_Libros-Gratis.md`, `writeup_Soporte-confidencial.md`).
 
 👉 *Para ver la tabla completa con los 51 desafíos, el estado de resolución y el índice temático, consulta el [`README de Software Seguro`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/README.md).*
 
