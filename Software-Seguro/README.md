@@ -134,7 +134,7 @@ Desafíos orientados al aprendizaje de la plataforma y el uso de herramientas ba
 | 8 | El blog de Pepe segurizado | XSS | - | ✅ Resuelto (Lucas) | [`xss/writeup_el-blog-de-pepe-segurizado_Lucas.md`](xss/writeup_el-blog-de-pepe-segurizado_Lucas.md) |
 | 9 | Algoritmo personalizado | Criptoanálisis | HackLab 2023 | ✅ Resuelto | [`criptoanalisis/writeup_Algoritmo-personalizado.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/criptoanalisis/writeup_Algoritmo-personalizado.md) |
 | 10 | Mensaje cifrado | Criptoanálisis | - | ✅ Resuelto | [`criptoanalisis/writeup-Mensaje_Cifrado.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/criptoanalisis/writeup-Mensaje_Cifrado.md) |
-| 11 | Gran Rifa 2019 | Mass Assignment | - | ⏳ Pendiente | `mass-assignment/gran-rifa-2019/` |
+| 11 | Gran Rifa 2019 | Mass Assignment | - | ✅ Resuelto | [`mass-assignment/writeup_Gran-Rifa-2019.md`](mass-assignment/writeup_Gran-Rifa-2019.md) |
 | 12 | Votación | Broken Access Control | - | ⏳ Pendiente | `broken-access-control/votacion/` |
 | 13 | Recuperación de imagen | Criptoanálisis | HackLab 2023 | ✅ Resuelto | [`criptoanalisis/writeup_Recuperación-de-imagen.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/criptoanalisis/writeup_Recuperación-de-imagen.md) |
 | 14 | Manipulando el Stack | Desbordamiento de memoria | - | ✅ Resuelto | `desbordamiento-de-memoria/manipulando-el-stack/` |
