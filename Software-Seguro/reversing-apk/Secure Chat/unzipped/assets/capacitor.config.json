@@ -1,0 +1,11 @@
+{
+	"appId": "com.hacklab.securechat",
+	"appName": "SecureChat",
+	"webDir": "www",
+	"android": {},
+	"plugins": {
+		"Motion": {
+			"interval": 100
+		}
+	}
+}
