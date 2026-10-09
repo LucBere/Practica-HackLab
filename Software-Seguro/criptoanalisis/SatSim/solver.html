@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SatSim Solver</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #1e1e1e; color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+        .container { background-color: #2d2d2d; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); text-align: center; max-width: 600px; width: 100%; }
+        input { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #444; background-color: #111; color: #0f0; font-family: monospace; font-size: 16px; box-sizing: border-box; }
+        button { background-color: #007bff; color: white; border: none; padding: 12px 20px; font-size: 16px; border-radius: 5px; cursor: pointer; transition: 0.3s; margin-top: 10px; width: 100%; font-weight: bold; }
+        button:hover { background-color: #0056b3; }
+        .result { margin-top: 20px; padding: 15px; background-color: #111; border: 1px solid #0f0; border-radius: 5px; color: #0f0; font-size: 20px; font-family: monospace; word-break: break-all; min-height: 24px; }
+        .instructions { font-size: 14px; color: #ccc; margin-bottom: 20px; text-align: left; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🚀 SatSim Auto-Solver</h2>
+        <div class="instructions">
+            Pega rápidamente las tramas 1 y 2 obtenidas del sniffer. El cálculo es automático e instantáneo.
+        </div>
+        <input type="text" id="trama1" placeholder="Pega la Trama 1 aquí (ej. 79fb5ace...)" autocomplete="off">
+        <input type="text" id="trama2" placeholder="Pega la Trama 2 aquí (ej. 79ff5acd...)" autocomplete="off">
+        <div class="result" id="result">El payload aparecerá aquí...</div>
+        <button id="copyBtn" style="display: none;" onclick="copyToClipboard()">Copiar al Portapapeles</button>
+    </div>
+
+    <script>
+        function hexToBytes(hex) {
+            let bytes = [];
+            for (let c = 0; c < hex.length; c += 2)
+                bytes.push(parseInt(hex.substr(c, 2), 16));
+            return bytes;
+        }
+
+        function bytesToHex(bytes) {
+            return bytes.map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+
+        function solve() {
+            const hex1 = document.getElementById('trama1').value.trim();
+            const hex2 = document.getElementById('trama2').value.trim();
+            const resultDiv = document.getElementById('result');
+            const copyBtn = document.getElementById('copyBtn');
+
+            if (hex1.length !== 32 || hex2.length !== 32) {
+                resultDiv.innerText = "Las tramas deben tener 32 caracteres (16 bytes).";
+                copyBtn.style.display = 'none';
+                return;
+            }
+
+            const c1 = hexToBytes(hex1);
+            const c2 = hexToBytes(hex2);
+            let c3 = new Array(16).fill(0);
+
+            // 1. Calcular CMD_ID (00 03)
+            // P2 = 00 05, P3 = 00 03. Diferencia XOR = 00 06.
+            c3[0] = c2[0] ^ 0x00;
+            c3[1] = c2[1] ^ 0x06;
+
+            // 2. Calcular SEQ
+            let seq1_c = (c1[2] << 8) | c1[3];
+            let seq2_c = (c2[2] << 8) | c2[3];
+            let xor_seqs = seq1_c ^ seq2_c;
+            
+            let seq1_real = -1;
+            for(let i=0; i<65536; i++){
+                if ((i ^ (i+1)) === xor_seqs) {
+                    seq1_real = i;
+                    break;
+                }
+            }
+
+            if(seq1_real === -1) {
+                resultDiv.innerText = "Error: Secuencia no encontrada. ¿Las tramas son correctas?";
+                copyBtn.style.display = 'none';
+                return;
+            }
+
+            let seq2_real = seq1_real + 1;
+            let seq3_real = seq2_real + 1;
+
+            let k_seq = seq2_c ^ seq2_real;
+            let seq3_enc = seq3_real ^ k_seq;
+
+            c3[2] = (seq3_enc >> 8) & 0xFF;
+            c3[3] = seq3_enc & 0xFF;
+
+            // 3. Payload = Ceros, por ende C3 = C2
+            for(let i=4; i<12; i++){
+                c3[i] = c2[i];
+            }
+
+            // 4. duration_ms = 4096 (10 00)
+            c3[12] = c2[12] ^ 0x10;
+            c3[13] = c2[13] ^ 0x00;
+
+            // 5. delta_v = 256 (01 00)
+            c3[14] = c2[14] ^ 0x01;
+            c3[15] = c2[15] ^ 0x00;
+
+            const finalHex = bytesToHex(c3);
+            resultDiv.innerText = finalHex;
+            copyBtn.style.display = 'block';
+        }
+
+        document.getElementById('trama1').addEventListener('input', solve);
+        document.getElementById('trama2').addEventListener('input', solve);
+
+        function copyToClipboard() {
+            const resultText = document.getElementById('result').innerText;
+            navigator.clipboard.writeText(resultText).then(() => {
+                const btn = document.getElementById('copyBtn');
+                btn.innerText = "¡Copiado!";
+                setTimeout(() => btn.innerText = "Copiar al Portapapeles", 2000);
+            });
+        }
+    </script>
+</body>
+</html>
