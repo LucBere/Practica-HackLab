@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Cambio de monitor",
+    "description": "El monitor parpadea constantemente.",
+    "user_id": 11
+  },
+  {
+    "id": 2,
+    "title": "Teclado roto",
+    "description": "Faltan algunas teclas.",
+    "user_id": 18
+  },
+  {
+    "id": 3,
+    "title": "Mouse no responde",
+    "description": "El mouse inalámbrico dejó de funcionar.",
+    "user_id": 13
+  },
+  {
+    "id": 4,
+    "title": "Sin acceso a VPN",
+    "description": "La VPN rechaza mis credenciales desde ayer.",
+    "user_id": 20
+  }
+]

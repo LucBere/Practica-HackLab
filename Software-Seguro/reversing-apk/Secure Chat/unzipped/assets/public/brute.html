@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+  <div id="output">Calculating...</div>
+  <script>
+    setTimeout(() => {
+        const pinData = "U2FsdGVkX19fmBw92ecLtpE1bRwUFDL2lhCKJJLubM1TNgGCnLeE+ndbtICJBszUNjetOdtUPNwjMu6Hy4+d/A==";
+        let found = false;
+        for (let i = 0; i <= 9999; i++) {
+            const pin = i.toString().padStart(4, '0');
+            try {
+                const decrypted = CryptoJS.AES.decrypt(pinData, pin).toString(CryptoJS.enc.Utf8);
+                if (decrypted && decrypted.length === 32) {
+                    document.getElementById('output').innerText = "Found PIN: " + pin + " | Data: " + decrypted;
+                    found = true;
+                    break;
+                }
+            } catch(e) {}
+        }
+        if(!found) document.getElementById('output').innerText = "Not found";
+    }, 100);
+  </script>
+</body>
+</html>
