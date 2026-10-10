@@ -146,7 +146,7 @@ Desafíos orientados al aprendizaje de la plataforma y el uso de herramientas ba
 | 20 | Galería de imágenes | SQLi | HackLab 2023 | ✅ Resuelto | [`sqli/writeup_Galeria-de-imagenes.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/sqli/writeup_Galeria-de-imagenes.md) |
 | 21 | Logs | SQLi | HackLab 2023 | ✅ Resuelto | [`sqli/writeup_Logs.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/sqli/writeup_Logs.md) |
 | 22 | Turnero | IDOR | HackLab 2024 | ✅ Resuelto (Lucas) | [`idor/writeup_turnero_Lucas.md`](idor/writeup_turnero_Lucas.md) |
-| 23 | Calculadora | IDOR - Reversing Desktop Apps | HackLab 2024 | ✅ Resuelto (adonaissh) | [`reversing/writeup_Calculadora.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/reversing/writeup_Calculadora.md) |
+| 23 | Calculadora | IDOR - Reversing Desktop Apps | HackLab 2024 | ✅ Resuelto (adonaissh, Lucas) | [`reversing/writeup_Calculadora_Lucas.md`](reversing/writeup_Calculadora_Lucas.md) |
 | 24 | Préstamo | Mass Assignment | HackLab 2024 | ⏳ Pendiente | `mass-assignment/prestamo/` |
 | 25 | Chat Seguro | Criptoanálisis | HackLab 2024 | ⏳ Pendiente | `criptoanalisis/chat-seguro/` |
 | 26 | Asistencia | Information Disclosure | HackLab 2024 | ⏳ Pendiente | `information-disclosure/asistencia/` |
