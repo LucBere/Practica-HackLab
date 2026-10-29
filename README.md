@@ -74,6 +74,8 @@ Laboratorio oficial de [PortSwigger Web Security Academy](https://portswigger.ne
 - **XXE Injection (Apprentice):** [`PortSwigger/xxe/writeup_exploiting-xxe-to-retrieve-files.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/PortSwigger/xxe/writeup_exploiting-xxe-to-retrieve-files.md)
 - **XXE Injection — Blind / Error-based (Expert):** [`PortSwigger/xxe/writeup_exploiting-xxe-to-retrieve-data-by-repurposing-a-local-dtd.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/PortSwigger/xxe/writeup_exploiting-xxe-to-retrieve-data-by-repurposing-a-local-dtd.md)
 - **XSS — CSP Bypass (Expert):** [`PortSwigger/xss/writeup_reflected-xss-protected-by-csp-with-csp-bypass.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/PortSwigger/xss/writeup_reflected-xss-protected-by-csp-with-csp-bypass.md)
+- **Web LLM Attacks — Indirect Prompt Injection (Expert):** [`PortSwigger/web-llm-attacks/writeup_exploiting-insecure-output-handling-in-llms.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/PortSwigger/web-llm-attacks/writeup_exploiting-insecure-output-handling-in-llms.md)
+
 
 
 

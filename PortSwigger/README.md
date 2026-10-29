@@ -8,6 +8,7 @@ Repositorio de documentación, notas técnicas, análisis de vulnerabilidades y 
 
 - **[XML external entity (XXE) injection](xxe/)**
 - **[Cross-site scripting (XSS)](xss/)**
+- **[Web LLM attacks](web-llm-attacks/)**
 
 ---
 
@@ -18,5 +19,7 @@ Repositorio de documentación, notas técnicas, análisis de vulnerabilidades y 
 | 1 | **Exploiting XXE using external entities to retrieve files** | XXE injection | Apprentice | ✅ Resuelto | [`xxe/writeup_exploiting-xxe-to-retrieve-files.md`](xxe/writeup_exploiting-xxe-to-retrieve-files.md) |
 | 2 | **Exploiting XXE to retrieve data by repurposing a local DTD** | XXE injection — Blind / Error-based | Expert | ✅ Resuelto | [`xxe/writeup_exploiting-xxe-to-retrieve-data-by-repurposing-a-local-dtd.md`](xxe/writeup_exploiting-xxe-to-retrieve-data-by-repurposing-a-local-dtd.md) |
 | 3 | **Reflected XSS protected by CSP, with CSP bypass** | XSS — CSP Bypass | Expert | ✅ Resuelto | [`xss/writeup_reflected-xss-protected-by-csp-with-csp-bypass.md`](xss/writeup_reflected-xss-protected-by-csp-with-csp-bypass.md) |
+| 4 | **Exploiting insecure output handling in LLMs** | Web LLM attacks — Indirect Prompt Injection | Expert | ✅ Resuelto | [`web-llm-attacks/writeup_exploiting-insecure-output-handling-in-llms.md`](web-llm-attacks/writeup_exploiting-insecure-output-handling-in-llms.md) |
+
 
 
