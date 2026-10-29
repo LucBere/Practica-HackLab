@@ -144,7 +144,7 @@ Tabla oficial de los desafíos de la edición **HackLab 2026**, organizados por 
 | 67 | **ProMarket** | Lógica de negocio | 20 pts | ✅ Resuelto | `logica-de-negocio/` *(Pendiente de redacción)* |
 | 68 | **Repo Filtrado** | Information Disclosure | 20 pts | ✅ Resuelto | `information-disclosure/` *(Pendiente de redacción)* |
 | 66 | **Secreto en el LLM** | Web LLM | 30 pts | ✅ Resuelto | [`web-llm/writeup_Secreto-en-el-LLM_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/web-llm/writeup_Secreto-en-el-LLM_2026.md) |
-| 65 | **El Estanque de Pepe** | IDOR | 30 pts | ✅ Resuelto | `idor/` *(Pendiente de redacción)* |
+| 65 | **El Estanque de Pepe** | IDOR | 30 pts | ✅ Resuelto (adonaissh) | [`idor/writeup_El-Estanque-de-Pepe_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/idor/writeup_El-Estanque-de-Pepe_2026.md) |
 | 71 | **Vulpasar** | Forense | 30 pts | ✅ Resuelto | [`forense/writeup_Vulpasar_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/forense/writeup_Vulpasar_2026.md) |
 | 72 | **FabiFiber** | RCE | 30 pts | ✅ Resuelto | [`rce/writeup_FabiFiber_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/rce/writeup_FabiFiber_2026.md) |
 | 58 | **Cuentas claras** | SQLi | 30 pts | ✅ Resuelto | [`sqli/writeup_Cuentas-Claras_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/sqli/writeup_Cuentas-Claras_2026.md) |
