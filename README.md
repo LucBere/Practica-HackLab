@@ -67,5 +67,13 @@ Consulta el [ROADMAP de CyLab](file:///d:/HackLab_Practica/Practica-HackLab-main
 
 ---
 
+## 🎯 3. PortSwigger Web Security Academy
+
+Laboratorio oficial de [PortSwigger Web Security Academy](https://portswigger.net/web-security) con soluciones detalladas organizadas por vulnerabilidad. Consulta el [`README de PortSwigger`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/PortSwigger/README.md).
+
+- **XXE Injection:** [`PortSwigger/xxe/writeup_exploiting-xxe-to-retrieve-files.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/PortSwigger/xxe/writeup_exploiting-xxe-to-retrieve-files.md)
+
+---
+
 *Colaboradores:* `adonaissh`, `LucBere`  
 *Entorno:* Windows / PowerShell / Python / Burp Suite / Browser DevTools
