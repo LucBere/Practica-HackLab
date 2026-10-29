@@ -115,6 +115,21 @@ Desafíos orientados al aprendizaje de la plataforma y el uso de herramientas ba
 - **Necesitás:** Manejo elemental del navegador.  
 - **Herramientas:** DevTools (`F12`), pestañas Elements, Console, Application/Storage.
 
+#### 20. Web LLM / AI Security
+Auditoría y explotación de aplicaciones basadas en Modelos de Lenguaje (LLMs) y redes neuronales: extracción de datos memorizados en adaptadores (LoRA/peft), manipulación de tensores (`safetensors`), *prompt injection*, evasión de compuertas/guardrails y *model inversion*.  
+- **Necesitás:** Fundamentos de inferencia de modelos, tensores y PyTorch, estructura de adaptadores LoRA, prompting/tokenizers.  
+- **Herramientas:** Python (`torch`, `transformers`, `safetensors`), Jupyter / scripts interactivos.
+
+#### 21. RCE (Remote Code Execution)
+Ejecución de código o comandos arbitrarios en el servidor o dispositivo objetivo abusando de entradas mal sanitizadas en utilidades de sistema (OS Command Injection), deserialización insegura o subida de archivos ejecutables.  
+- **Necesitás:** Metacaracteres de shell (`;`, `&&`, `|`, backticks), bypass de filtros y espacios, interacción con terminal/entornos Linux/Busybox.  
+- **Herramientas:** Burp Suite, terminal Linux/WSL2, netcat/revshells.
+
+#### 22. Forense (Digital Forensics)
+Análisis de imágenes de disco, volcados de memoria y artefactos de sistema operativo para reconstruir eventos, extraer evidencias o recuperar datos protegidos.  
+- **Necesitás:** Estructuras de sistemas de archivos (ext4, NTFS), artefactos de navegadores (`places.sqlite`, `logins.json`, `key4.db`), montaje de imágenes de disco e inspección de metadatos.  
+- **Herramientas:** VirtualBox / VMware, `Autopsy`, `The Sleuth Kit (TSK)`, scripts de extracción de navegadores (`firepwd`).
+
 > [!TIP]
 > **Herramienta transversal más importante:** **Burp Suite** (la versión Community gratuita es suficiente para la gran mayoría de retos web) — permite interceptar, modificar, automatizar y repetir requests HTTP/HTTPS con facilidad.
 
@@ -175,6 +190,18 @@ Desafíos orientados al aprendizaje de la plataforma y el uso de herramientas ba
 | 50 | SatSim | Criptoanálisis | - | ⏳ Pendiente | `criptoanalisis/satsim/` |
 | 51 | Imagen perdida | Criptoanálisis | - | ⏳ Pendiente | `criptoanalisis/imagen-perdida/` |
 | 52 | Soporte Confidencial | IDOR - Reversing Apk | HackingDay 2026 | ✅ Resuelto (adonaissh) | [`reversing-apk/writeup_Soporte-confidencial.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/reversing-apk/writeup_Soporte-confidencial.md) |
+| 53 | Secreto en el LLM | Web LLM | HackLab 2026 | ✅ Resuelto (adonaissh) | [`web-llm/writeup_Secreto-en-el-LLM_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/web-llm/writeup_Secreto-en-el-LLM_2026.md) |
+| 54 | Cuentas Claras | SQLi | HackLab 2026 | ✅ Resuelto (adonaissh) | [`sqli/writeup_Cuentas-Claras_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/sqli/writeup_Cuentas-Claras_2026.md) |
+| 55 | Casino de Germán | Reversing Desktop Apps - Criptoanálisis | HackLab 2026 | ✅ Resuelto (adonaissh) | [`reversing/writeup_Casino-de-German_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/reversing/writeup_Casino-de-German_2026.md) |
+| 56 | Balrog | Auth | HackLab 2026 | ✅ Resuelto (adonaissh) | [`auth/writeup_Balrog_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/auth/writeup_Balrog_2026.md) |
+| 57 | Revisor de videos | XSS | HackLab 2026 | ✅ Resuelto (adonaissh) | [`xss/writeup_Revisor-de-videos_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/xss/writeup_Revisor-de-videos_2026.md) |
+| 58 | FabiFiber | RCE | HackLab 2026 | ✅ Resuelto (adonaissh) | [`rce/writeup_FabiFiber_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/rce/writeup_FabiFiber_2026.md) |
+| 59 | Encuentro Obligado | Condiciones de carrera | HackLab 2026 | ✅ Resuelto (adonaissh) | [`condiciones-de-carrera/writeup_Encuentro-Obligado_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/condiciones-de-carrera/writeup_Encuentro-Obligado_2026.md) |
+| 60 | ArteStudio | Broken Access Control | HackLab 2026 | ✅ Resuelto (adonaissh) | [`broken-access-control/writeup_ArteStudio_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/broken-access-control/writeup_ArteStudio_2026.md) |
+| 61 | Veltra Bank | Auth | HackLab 2026 | ✅ Resuelto (adonaissh) | [`auth/writeup_Veltra-Bank_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/auth/writeup_Veltra-Bank_2026.md) |
+| 62 | Vulpasar | Forense | HackLab 2026 | ✅ Resuelto (adonaissh) | [`forense/writeup_Vulpasar_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/forense/writeup_Vulpasar_2026.md) |
+| 63 | Frandawos Corp | Tokens / Info Disclosure *(No especificada)* | HackLab 2026 | ✅ Resuelto (adonaissh) | [`tokens/writeup_Frandawos-Corp_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/tokens/writeup_Frandawos-Corp_2026.md) |
+| 64 | Juegos casi libres | XSS | HackLab 2026 | ✅ Resuelto (adonaissh) | [`xss/writeup_Juegos-casi-libres_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/xss/writeup_Juegos-casi-libres_2026.md) |
 
 ---
 
