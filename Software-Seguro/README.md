@@ -135,7 +135,33 @@ Análisis de imágenes de disco, volcados de memoria y artefactos de sistema ope
 
 ---
 
-## 📋 Catálogo Completo de Desafíos (Software Seguro)
+## 🏆 HackLab 2026 — Desafíos y Writeups
+
+Tabla oficial de los desafíos de la edición **HackLab 2026**, organizados por puntaje, con su categoría y enlace directo al writeup correspondiente:
+
+| ID | Desafío | Categoría | Puntos | Estado | Writeup |
+|:---:|---|---|:---:|:---:|---|
+| 67 | **ProMarket** | Lógica de negocio | 20 pts | ✅ Resuelto | `logica-de-negocio/` *(Pendiente de redacción)* |
+| 68 | **Repo Filtrado** | Information Disclosure | 20 pts | ✅ Resuelto | `information-disclosure/` *(Pendiente de redacción)* |
+| 66 | **Secreto en el LLM** | Web LLM | 30 pts | ✅ Resuelto | [`web-llm/writeup_Secreto-en-el-LLM_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/web-llm/writeup_Secreto-en-el-LLM_2026.md) |
+| 65 | **El Estanque de Pepe** | IDOR | 30 pts | ✅ Resuelto | `idor/` *(Pendiente de redacción)* |
+| 71 | **Vulpasar** | Forense | 30 pts | ✅ Resuelto | [`forense/writeup_Vulpasar_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/forense/writeup_Vulpasar_2026.md) |
+| 72 | **FabiFiber** | RCE | 30 pts | ✅ Resuelto | [`rce/writeup_FabiFiber_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/rce/writeup_FabiFiber_2026.md) |
+| 58 | **Cuentas claras** | SQLi | 30 pts | ✅ Resuelto | [`sqli/writeup_Cuentas-Claras_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/sqli/writeup_Cuentas-Claras_2026.md) |
+| -  | **Frandawos Corp** | Tokens / Info Disclosure *(No especificada)* | 30 pts | ✅ Resuelto | [`tokens/writeup_Frandawos-Corp_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/tokens/writeup_Frandawos-Corp_2026.md) |
+| 73 | **ArteStudio** | Broken Access Control | 40 pts | ✅ Resuelto | [`broken-access-control/writeup_ArteStudio_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/broken-access-control/writeup_ArteStudio_2026.md) |
+| 69 | **Balrog** | Auth | 40 pts | ✅ Resuelto | [`auth/writeup_Balrog_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/auth/writeup_Balrog_2026.md) |
+| 62 | **Capturando al Ladrón** | Reversing Apk | 40 pts | ✅ Resuelto | `reversing-apk/` *(Pendiente de redacción)* |
+| 61 | **Encuentro Obligado** | Condiciones de carrera | 50 pts | ✅ Resuelto | [`condiciones-de-carrera/writeup_Encuentro-Obligado_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/condiciones-de-carrera/writeup_Encuentro-Obligado_2026.md) |
+| 56 | **Juegos casi libres** | XSS | 50 pts | ✅ Resuelto | [`xss/writeup_Juegos-casi-libres_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/xss/writeup_Juegos-casi-libres_2026.md) |
+| 57 | **Revisor de videos** | XSS | 50 pts | ✅ Resuelto | [`xss/writeup_Revisor-de-videos_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/xss/writeup_Revisor-de-videos_2026.md) |
+| 60 | **Análisis de TPs** | Condiciones de carrera | 50 pts | ❌ No resuelto | `condiciones-de-carrera/` |
+| 74 | **Veltra Bank** | Auth | 50 pts | ✅ Resuelto | [`auth/writeup_Veltra-Bank_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/auth/writeup_Veltra-Bank_2026.md) |
+| 59 | **Casino de Germán** | Reversing Desktop Apps - Criptoanálisis | 50 pts | ✅ Resuelto | [`reversing/writeup_Casino-de-German_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/reversing/writeup_Casino-de-German_2026.md) |
+
+---
+
+## 📋 Catálogo Histórico y Práctica General (Software Seguro)
 
 | # | Desafío | Categoría | Evento / Edición | Estado | Writeup / Ruta |
 |---|---|---|---|:---:|---|
@@ -190,18 +216,6 @@ Análisis de imágenes de disco, volcados de memoria y artefactos de sistema ope
 | 50 | SatSim | Criptoanálisis | - | ⏳ Pendiente | `criptoanalisis/satsim/` |
 | 51 | Imagen perdida | Criptoanálisis | - | ⏳ Pendiente | `criptoanalisis/imagen-perdida/` |
 | 52 | Soporte Confidencial | IDOR - Reversing Apk | HackingDay 2026 | ✅ Resuelto (adonaissh) | [`reversing-apk/writeup_Soporte-confidencial.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/reversing-apk/writeup_Soporte-confidencial.md) |
-| 53 | Secreto en el LLM | Web LLM | HackLab 2026 | ✅ Resuelto (adonaissh) | [`web-llm/writeup_Secreto-en-el-LLM_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/web-llm/writeup_Secreto-en-el-LLM_2026.md) |
-| 54 | Cuentas Claras | SQLi | HackLab 2026 | ✅ Resuelto (adonaissh) | [`sqli/writeup_Cuentas-Claras_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/sqli/writeup_Cuentas-Claras_2026.md) |
-| 55 | Casino de Germán | Reversing Desktop Apps - Criptoanálisis | HackLab 2026 | ✅ Resuelto (adonaissh) | [`reversing/writeup_Casino-de-German_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/reversing/writeup_Casino-de-German_2026.md) |
-| 56 | Balrog | Auth | HackLab 2026 | ✅ Resuelto (adonaissh) | [`auth/writeup_Balrog_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/auth/writeup_Balrog_2026.md) |
-| 57 | Revisor de videos | XSS | HackLab 2026 | ✅ Resuelto (adonaissh) | [`xss/writeup_Revisor-de-videos_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/xss/writeup_Revisor-de-videos_2026.md) |
-| 58 | FabiFiber | RCE | HackLab 2026 | ✅ Resuelto (adonaissh) | [`rce/writeup_FabiFiber_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/rce/writeup_FabiFiber_2026.md) |
-| 59 | Encuentro Obligado | Condiciones de carrera | HackLab 2026 | ✅ Resuelto (adonaissh) | [`condiciones-de-carrera/writeup_Encuentro-Obligado_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/condiciones-de-carrera/writeup_Encuentro-Obligado_2026.md) |
-| 60 | ArteStudio | Broken Access Control | HackLab 2026 | ✅ Resuelto (adonaissh) | [`broken-access-control/writeup_ArteStudio_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/broken-access-control/writeup_ArteStudio_2026.md) |
-| 61 | Veltra Bank | Auth | HackLab 2026 | ✅ Resuelto (adonaissh) | [`auth/writeup_Veltra-Bank_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/auth/writeup_Veltra-Bank_2026.md) |
-| 62 | Vulpasar | Forense | HackLab 2026 | ✅ Resuelto (adonaissh) | [`forense/writeup_Vulpasar_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/forense/writeup_Vulpasar_2026.md) |
-| 63 | Frandawos Corp | Tokens / Info Disclosure *(No especificada)* | HackLab 2026 | ✅ Resuelto (adonaissh) | [`tokens/writeup_Frandawos-Corp_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/tokens/writeup_Frandawos-Corp_2026.md) |
-| 64 | Juegos casi libres | XSS | HackLab 2026 | ✅ Resuelto (adonaissh) | [`xss/writeup_Juegos-casi-libres_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/xss/writeup_Juegos-casi-libres_2026.md) |
 
 ---
 
