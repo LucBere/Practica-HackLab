@@ -155,7 +155,7 @@ Tabla oficial de los desafíos de la edición **HackLab 2026**, organizados por 
 | 61 | **Encuentro Obligado** | Condiciones de carrera | 50 pts | ✅ Resuelto | [`condiciones-de-carrera/writeup_Encuentro-Obligado_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/condiciones-de-carrera/writeup_Encuentro-Obligado_2026.md) |
 | 56 | **Juegos casi libres** | XSS | 50 pts | ✅ Resuelto | [`xss/writeup_Juegos-casi-libres_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/xss/writeup_Juegos-casi-libres_2026.md) |
 | 57 | **Revisor de videos** | XSS | 50 pts | ✅ Resuelto | [`xss/writeup_Revisor-de-videos_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/xss/writeup_Revisor-de-videos_2026.md) |
-| 60 | **Análisis de TPs** | Condiciones de carrera | 50 pts | ❌ No resuelto | `condiciones-de-carrera/` |
+| 60 | **Análisis de TPs** | Condiciones de carrera | 50 pts | ✅ Resuelto (adonaissh) | [`condiciones-de-carrera/writeup_Analisis-de-TPs_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/condiciones-de-carrera/writeup_Analisis-de-TPs_2026.md) |
 | 74 | **Veltra Bank** | Auth | 50 pts | ✅ Resuelto | [`auth/writeup_Veltra-Bank_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/auth/writeup_Veltra-Bank_2026.md) |
 | 59 | **Casino de Germán** | Reversing Desktop Apps - Criptoanálisis | 50 pts | ✅ Resuelto | [`reversing/writeup_Casino-de-German_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/reversing/writeup_Casino-de-German_2026.md) |
 
