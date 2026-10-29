@@ -71,7 +71,9 @@ Consulta el [ROADMAP de CyLab](file:///d:/HackLab_Practica/Practica-HackLab-main
 
 Laboratorio oficial de [PortSwigger Web Security Academy](https://portswigger.net/web-security) con soluciones detalladas organizadas por vulnerabilidad. Consulta el [`README de PortSwigger`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/PortSwigger/README.md).
 
-- **XXE Injection:** [`PortSwigger/xxe/writeup_exploiting-xxe-to-retrieve-files.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/PortSwigger/xxe/writeup_exploiting-xxe-to-retrieve-files.md)
+- **XXE Injection (Apprentice):** [`PortSwigger/xxe/writeup_exploiting-xxe-to-retrieve-files.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/PortSwigger/xxe/writeup_exploiting-xxe-to-retrieve-files.md)
+- **XXE Injection — Blind / Error-based (Expert):** [`PortSwigger/xxe/writeup_exploiting-xxe-to-retrieve-data-by-repurposing-a-local-dtd.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/PortSwigger/xxe/writeup_exploiting-xxe-to-retrieve-data-by-repurposing-a-local-dtd.md)
+
 
 ---
 

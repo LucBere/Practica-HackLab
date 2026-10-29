@@ -15,3 +15,5 @@ Repositorio de documentación, notas técnicas, análisis de vulnerabilidades y 
 | # | Laboratorio | Categoría | Dificultad | Estado | Writeup |
 |:---:|---|---|:---:|:---:|---|
 | 1 | **Exploiting XXE using external entities to retrieve files** | XXE injection | Apprentice | ✅ Resuelto | [`xxe/writeup_exploiting-xxe-to-retrieve-files.md`](xxe/writeup_exploiting-xxe-to-retrieve-files.md) |
+| 2 | **Exploiting XXE to retrieve data by repurposing a local DTD** | XXE injection — Blind / Error-based | Expert | ✅ Resuelto | [`xxe/writeup_exploiting-xxe-to-retrieve-data-by-repurposing-a-local-dtd.md`](xxe/writeup_exploiting-xxe-to-retrieve-data-by-repurposing-a-local-dtd.md) |
+
