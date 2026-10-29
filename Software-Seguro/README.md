@@ -142,16 +142,16 @@ Tabla oficial de los desafíos de la edición **HackLab 2026**, organizados por 
 | ID | Desafío | Categoría | Puntos | Estado | Writeup |
 |:---:|---|---|:---:|:---:|---|
 | 67 | **ProMarket** | Lógica de negocio | 20 pts | ✅ Resuelto | `logica-de-negocio/` *(Pendiente de redacción)* |
-| 68 | **Repo Filtrado** | Information Disclosure | 20 pts | ✅ Resuelto | `information-disclosure/` *(Pendiente de redacción)* |
+| 68 | **Repo Filtrado** | Information Disclosure | 20 pts | ✅ Resuelto (Lucas) | [`information-disclosure/Writeup-RepoFiltrado.md`](information-disclosure/Writeup-RepoFiltrado.md) |
 | 66 | **Secreto en el LLM** | Web LLM | 30 pts | ✅ Resuelto | [`web-llm/writeup_Secreto-en-el-LLM_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/web-llm/writeup_Secreto-en-el-LLM_2026.md) |
-| 65 | **El Estanque de Pepe** | IDOR | 30 pts | ✅ Resuelto (adonaissh) | [`idor/writeup_El-Estanque-de-Pepe_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/idor/writeup_El-Estanque-de-Pepe_2026.md) |
+| 65 | **El Estanque de Pepe** | IDOR | 30 pts | ✅ Resuelto (adonaissh, Lucas) | [`idor/writeup_El-Estanque-de-Pepe_2026.md`](idor/writeup_El-Estanque-de-Pepe_2026.md) \| [`EstanqueDePepe/`](EstanqueDePepe/Writeup.md) |
 | 71 | **Vulpasar** | Forense | 30 pts | ✅ Resuelto | [`forense/writeup_Vulpasar_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/forense/writeup_Vulpasar_2026.md) |
 | 72 | **FabiFiber** | RCE | 30 pts | ✅ Resuelto | [`rce/writeup_FabiFiber_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/rce/writeup_FabiFiber_2026.md) |
 | 58 | **Cuentas claras** | SQLi | 30 pts | ✅ Resuelto | [`sqli/writeup_Cuentas-Claras_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/sqli/writeup_Cuentas-Claras_2026.md) |
 | -  | **Frandawos Corp** | Tokens / Info Disclosure *(No especificada)* | 30 pts | ✅ Resuelto | [`tokens/writeup_Frandawos-Corp_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/tokens/writeup_Frandawos-Corp_2026.md) |
 | 73 | **ArteStudio** | Broken Access Control | 40 pts | ✅ Resuelto | [`broken-access-control/writeup_ArteStudio_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/broken-access-control/writeup_ArteStudio_2026.md) |
 | 69 | **Balrog** | Auth | 40 pts | ✅ Resuelto | [`auth/writeup_Balrog_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/auth/writeup_Balrog_2026.md) |
-| 62 | **Capturando al Ladrón** | Reversing Apk | 40 pts | ✅ Resuelto (adonaissh) | [`reversing-apk/writeup_Capturando-al-Ladron_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/reversing-apk/writeup_Capturando-al-Ladron_2026.md) |
+| 62 | **Capturando al Ladrón** | Reversing Apk | 40 pts | ✅ Resuelto (adonaissh, Lucas) | [`reversing-apk/writeup_Capturando-al-Ladron_2026.md`](reversing-apk/writeup_Capturando-al-Ladron_2026.md) \| [`capturandoalladron/`](capturandoalladron/README.md) |
 | 61 | **Encuentro Obligado** | Condiciones de carrera | 50 pts | ✅ Resuelto | [`condiciones-de-carrera/writeup_Encuentro-Obligado_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/condiciones-de-carrera/writeup_Encuentro-Obligado_2026.md) |
 | 56 | **Juegos casi libres** | XSS | 50 pts | ✅ Resuelto | [`xss/writeup_Juegos-casi-libres_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/xss/writeup_Juegos-casi-libres_2026.md) |
 | 57 | **Revisor de videos** | XSS | 50 pts | ✅ Resuelto | [`xss/writeup_Revisor-de-videos_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/xss/writeup_Revisor-de-videos_2026.md) |
