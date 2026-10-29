@@ -177,7 +177,7 @@ Tabla oficial de los desafíos de la edición **HackLab 2026**, organizados por 
 | 10 | Mensaje cifrado | Criptoanálisis | - | ✅ Resuelto | [`criptoanalisis/writeup-Mensaje_Cifrado.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/criptoanalisis/writeup-Mensaje_Cifrado.md) |
 | 11 | Gran Rifa 2019 | Mass Assignment | - | ✅ Resuelto | [`mass-assignment/writeup_Gran-Rifa-2019.md`](mass-assignment/writeup_Gran-Rifa-2019.md) |
 | 12 | Votación | Broken Access Control | - | ⏳ Pendiente | `broken-access-control/votacion/` |
-| 13 | Recuperación de imagen | Criptoanálisis | HackLab 2023 | ✅ Resuelto | [`criptoanalisis/writeup_Recuperación-de-imagen.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/criptoanalisis/writeup_Recuperación-de-imagen.md) |
+| 13 | Recuperación de imagen | Criptoanálisis | HackLab 2023 | ✅ Resuelto | [`criptoanalisis/writeup_Recuperacion-de-imagen.md`](criptoanalisis/writeup_Recuperacion-de-imagen.md) |
 | 14 | Manipulando el Stack | Desbordamiento de memoria | - | ✅ Resuelto | `desbordamiento-de-memoria/manipulando-el-stack/` |
 | 15 | Consulta de multas | Tokens | - | ⏳ Pendiente | `tokens/consulta-de-multas/` |
 | 16 | Ventas | Information Disclosure - IDOR | HackLab 2023 | ⏳ Pendiente | `idor/ventas/` |
@@ -208,7 +208,7 @@ Tabla oficial de los desafíos de la edición **HackLab 2026**, organizados por 
 | 42 | Direct chat | WebRTC | HackLab 2025 | ✅ Resuelto | [`webrtc/writeup_Direct-Chat.md`](webrtc/writeup_Direct-Chat.md) |
 | 43 | Blog Hacklab v2 | XSS | HackLab 2025 | ⏳ Pendiente | `xss/blog-hacklab-v2/` |
 | 44 | Mis viajes v2 | SQLi | HackLab 2025 | ✅ Resuelto (Lucas) | [`sqli/writeup_Mis-Viajes-V2.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/sqli/writeup_Mis-Viajes-V2.md) |
-| 45 | Tetris | Reversing Desktop Apps - Lógica de negocio | HackLab 2025 | ⏳ Pendiente | `reversing/tetris/` |
+| 45 | Tetris | Reversing Desktop Apps - Lógica de negocio | HackLab 2025 | ✅ Resuelto | [`reversing/writeup_tetris.md`](reversing/writeup_tetris.md) |
 | 46 | Secure Chat | Reversing Apk - Fuerza bruta | HackLab 2025 | ⏳ Pendiente | `reversing/secure-chat/` |
 | 47 | Venta de autos | Lógica de negocio | HackLab 2025 | ⏳ Pendiente | `logica-de-negocio/venta-de-autos/` |
 | 48 | Rompiendo Autenticación | Desbordamiento de memoria | - | ✅ Resuelto | [`desbordamiento-de-memoria/writeup_Rompiendo-Autenticacion.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/desbordamiento-de-memoria/writeup_Rompiendo-Autenticacion.md) |
