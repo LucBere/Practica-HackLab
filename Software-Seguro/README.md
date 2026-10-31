@@ -141,7 +141,8 @@ Tabla oficial de los desafíos de la edición **HackLab 2026**, organizados por 
 
 | ID | Desafío | Categoría | Puntos | Estado | Writeup |
 |:---:|---|---|:---:|:---:|---|
-| 67 | **ProMarket** | Lógica de negocio | 20 pts | ✅ Resuelto | `logica-de-negocio/` *(Pendiente de redacción)* |
+| 67 | **ProMarket** | Lógica de negocio | 20 pts | ✅ Resuelto | [`logica-de-negocio/writeup_ProMarket_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/logica-de-negocio/writeup_ProMarket_2026.md) |
+
 | 68 | **Repo Filtrado** | Information Disclosure | 20 pts | ✅ Resuelto (Lucas) | [`information-disclosure/Writeup-RepoFiltrado.md`](information-disclosure/Writeup-RepoFiltrado.md) |
 | 66 | **Secreto en el LLM** | Web LLM | 30 pts | ✅ Resuelto | [`web-llm/writeup_Secreto-en-el-LLM_2026.md`](file:///d:/HackLab_Practica/Practica-HackLab-main/Practica-HackLab/Software-Seguro/web-llm/writeup_Secreto-en-el-LLM_2026.md) |
 | 65 | **El Estanque de Pepe** | IDOR | 30 pts | ✅ Resuelto (adonaissh, Lucas) | [`idor/writeup_El-Estanque-de-Pepe_2026.md`](idor/writeup_El-Estanque-de-Pepe_2026.md) \| [`EstanqueDePepe/`](EstanqueDePepe/Writeup.md) |
